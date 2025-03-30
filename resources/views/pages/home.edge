@@ -1,27 +1,1009 @@
 @layout.main()
 
+  @slot('main')
+    <!-- mainSlider here -->
+    @include('partials/mainSlider')
+    <!-- mainSlider End -->
 
+    <!-- Fellowship Start -->
+    <section class="gap about-two">
 
-  <h1> It Works! </h1>
-   <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top12323"></button>
-            Hover over me
-        </button>
+      <div class="container">
+        <div class="row">
+          <div class="about-info m-auto text-center">
+            <h2 class="text-center mx-auto">
+              {{ t('home.church.title') }}
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
+              {{ t('home.church.description1') }}
+            </p>
+            <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
+              {{ t('home.church.description2') }}
+            </p>
+          </div>
+        </div>
 
-        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover"></button>
-  Popover on top
-</button>
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
-  Popover on right
-</button>
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-  Popover on bottom
-</button>
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
-  Popover on left
-</button>
+        <div class="row">
+          <div
+            class="col-lg-4 col-md-6 col-sm-12"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="400"
+          >
 
-       <script>
+            <div class="offer text-center">
 
+              <span>
 
-    </script>
+                <svg class="wedding-icon">
+                  <img src="resources/images/wedding.svg" alt="Wedding" class="colored-svg" />
+                  <!-- SVG content -->
+                </svg>
+
+              </span>
+
+              <h3>
+                <a href="JavaScript:void(0)">{{ t('home.fellowship.praise_worship.title') }}</a>
+              </h3>
+
+              <p class="mx-auto">
+                {{ t('home.fellowship.praise_worship.description') }}
+              </p>
+
+            </div>
+
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 col-sm-12"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="700"
+          >
+
+            <div class="offer text-center">
+
+              <span>
+
+                <img src="resources/images/pray.svg" alt="Pray" />
+
+              </span>
+
+              <h3>
+                <a href="JavaScript:void(0)">{{ t('home.fellowship.connect_members.title') }}</a>
+              </h3>
+
+              <p class="mx-auto">
+                {{ t('home.fellowship.connect_members.description') }}
+              </p>
+
+            </div>
+
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 col-sm-12"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="800"
+          >
+
+            <div class="offer text-center">
+
+              <span>
+
+                <img src="resources/images/bird.svg" alt="Bird" />
+
+              </span>
+
+              <h3>
+                <a href="JavaScript:void(0)">{{ t('home.fellowship.parents_love.title') }}</a>
+              </h3>
+
+              <p class="mx-auto">
+                {{ t('home.fellowship.parents_love.description') }}
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Fellowship End -->
+
+    <!-- Event Three Start -->
+
+    <section class="event-three">
+
+      <div class="container">
+        <div class="row">
+
+          {{-- services 1 --}}
+          <div class="col-lg-3 col-md-6 col-sm-12">
+
+            <div class="event">
+
+              <p>
+              </p>
+
+              <figure>
+
+                <img src="{{ asset('resources/images/service-1.jpg') }}" alt="event one" />
+
+              </figure>
+
+              <div class="event-data light-bg">
+
+                <h4 class="event-title">
+                  <a href="event-detail.html">{{ t('home.services.encounter.title') }}</a>
+                </h4>
+
+                <ul>
+
+                  <li>
+                    <img src="{{ asset('resources/images/calendar.svg') }}" alt="calendar" />{{ t('home.services.encounter.day') }}
+                  </li>
+
+                  <li>
+                    <img src="{{ asset('resources/images/clock.svg') }}" alt="clock" />{{ t('home.services.encounter.time') }}
+                  </li>
+
+                </ul>
+
+                <a class="theme-btn" href="JavaScript:void(0)">{{ t('home.services.encounter.button') }}</a>
+              </div>
+            </div>
+          </div>
+
+          {{-- services 2 --}}
+          <div class="col-lg-3 col-md-6 col-sm-12">
+
+            <div class="event">
+
+              <figure>
+
+                <img src="{{ asset('resources/images/service-5.jpg') }}" alt="event one" />
+
+              </figure>
+
+              <div class="event-data light-bg">
+
+                <h4 class="event-title">
+                  <a href="event-detail.html">{{ t('home.services.mandarin_english.title') }}</a>
+                </h4>
+
+                <ul>
+
+                  <li>
+                    <img src="{{ asset('resources/images/calendar.svg') }}" alt="calendar" />{{ t('home.services.mandarin_english.day') }}
+                  </li>
+
+                  <li>
+                    <img src="{{ asset('resources/images/clock.svg') }}" alt="clock" />{{ t('home.services.mandarin_english.time') }}
+                  </li>
+
+                </ul>
+
+                <a class="theme-btn" href="JavaScript:void(0)">{{ t('home.services.mandarin_english.button') }}</a>
+              </div>
+            </div>
+          </div>
+
+          {{-- services 3 --}}
+          <div class="col-lg-3 col-md-6 col-sm-12">
+
+            <div class="event">
+
+              <figure>
+
+                <img src="{{ asset('resources/images/service-3.jpg') }}" alt="event one" />
+
+              </figure>
+
+              <div class="event-data light-bg">
+
+                <h4 class="event-title">
+                  <a href="event-detail.html">{{ t('home.services.cantonese.title') }}</a>
+                </h4>
+
+                <ul>
+
+                  <li>
+                    <img src="{{ asset('resources/images/calendar.svg') }}" alt="calendar" />{{ t('home.services.cantonese.day') }}
+                  </li>
+
+                  <li>
+                    <img src="{{ asset('resources/images/clock.svg') }}" alt="clock" />{{ t('home.services.cantonese.time') }}
+                  </li>
+
+                </ul>
+
+                <a class="theme-btn" href="JavaScript:void(0)">{{ t('home.services.cantonese.button') }}</a>
+              </div>
+            </div>
+          </div>
+
+          {{-- services 4 --}}
+          <div class="col-lg-3 col-md-6 col-sm-12">
+
+            <div class="event">
+
+              <figure>
+
+                <img src="{{ asset('resources/images/service-4.jpg') }}" alt="event one" />
+
+              </figure>
+
+              <div class="event-data light-bg">
+
+                <h4 class="event-title">
+                  <a href="event-detail.html">{{ t('home.services.mosaic.title') }}</a>
+                </h4>
+
+                <ul>
+
+                  <li>
+                    <img src="{{ asset('resources/images/calendar.svg') }}" alt="calendar" />{{ t('home.services.mosaic.day') }}
+                  </li>
+
+                  <li>
+                    <img src="{{ asset('resources/images/clock.svg') }}" alt="clock" />{{ t('home.services.mosaic.time') }}
+                  </li>
+
+                </ul>
+
+                <a class="theme-btn" href="JavaScript:void(0)">{{ t('home.services.mosaic.button') }}</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="heading">
+          <div class="offer text-center">
+
+            <span class="event-three-icon">
+
+              <svg
+                id="book"
+                class="icon-book"
+                enable-background="new 0 0 510 510"
+                viewBox="0 0 510 510"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m42.05 368.101v-221.49c-10.958-.432-21.6-.78-31.75-1.091-5.64-.172-10.3 4.353-10.3 9.996v257.99c0 5.314 4.149 9.7 9.456 9.985 52.861 2.848 122.506 5.886 188.124 21.779-48.97-37.74-102.57-54.79-143.29-62.43-7.1-1.329-12.24-7.529-12.24-14.739z"
+                />
+                <path
+                  d="m467.95 144.791v223.31c0 7.21-5.14 13.41-12.24 14.74-40.72 7.64-94.32 24.69-143.29 62.43 65.517-15.871 134.984-18.917 188.124-21.78 5.307-.286 9.456-4.671 9.456-9.985v-259.081c0-5.515-4.462-9.992-9.977-10-8.87-.013-19.774.07-32.073.366z"
+                />
+                <path
+                  d="m72.05 74.729v281.122c49.59 10.9 113.11 34.67 167.95 86.16v-295.02c-34.8-43.752-99.31-71.63-156.098-82.092-6.162-1.135-11.852 3.564-11.852 9.83zm124.64 229.042c-4.315 7.059-13.546 9.299-20.62 4.98-8.11-4.95-28.87-16.78-46.66-19.79-8.17-1.38-13.67-9.12-12.29-17.29s9.12-13.67 17.29-12.29c22.11 3.73 45.39 16.49 57.29 23.77 7.07 4.32 9.3 13.55 4.99 20.62zm.34-94.83c-4.732 6.798-14.104 8.454-20.88 3.73-9.77-6.8-27.87-15.88-46.74-19.07-8.17-1.38-13.67-9.12-12.29-17.29s9.12-13.67 17.29-12.29c23.74 4.01 45.99 15.05 58.89 24.04 6.8 4.73 8.47 14.08 3.73 20.88z"
+                />
+                <path
+                  d="m426.099 64.9c-56.513 10.423-121.33 38.251-156.099 82.091v295.02c54.84-51.49 118.36-75.26 167.95-86.16v-281.12c0-6.266-5.69-10.967-11.851-9.831zm-45.509 224.061c-17.79 3.01-38.55 14.84-46.66 19.79-7.075 4.32-16.306 2.077-20.62-4.98-4.31-7.07-2.08-16.3 4.99-20.62 11.9-7.28 35.18-20.04 57.29-23.77 8.17-1.39 15.91 4.12 17.29 12.29s-4.12 15.91-12.29 17.29zm0-95.36c-18.87 3.19-36.97 12.27-46.74 19.07-6.77 4.72-16.143 3.074-20.88-3.73-4.74-6.8-3.07-16.15 3.73-20.88 12.9-8.99 35.15-20.03 58.89-24.04 8.17-1.39 15.91 4.12 17.29 12.29s-4.12 15.91-12.29 17.29z"
+                />
+              </svg>
+            </span>
+
+          </div>
+
+          <p>
+            {{ t('home.services.welcome_text') }}
+          </p>
+
+          <h2>
+            {{ t('home.services.heading') }}
+          </h2>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Event Three End -->
+
+<!-- Recent Sermons One Start -->
+
+<section class="gap light-bg recent-sermon-one">
+
+  <div class="container">
+
+    <div class="heading">
+
+      <p>
+
+      </p>
+
+      <h2>
+
+      </h2>
+
+    </div>
+
+    <div class="row">
+
+      <div class="sermon" data-aos="zoom-in-right" data-aos-duration="1000">
+
+        <div class="sermon-img">
+
+          <div class="sermon-media">
+
+            <img src="{{ asset('resources/images/subscribe.jpg') }}" alt="Subscribe to our YouTube channel" />
+
+          </div>
+
+        </div>
+
+        <div class="sermon-data">
+
+          <ul>
+
+            <li>
+              {{ t('home.media.youtube.label') }}
+            </li>
+
+          </ul>
+
+          <h3>
+            <a href="sermon-detail.html">{{ t('home.media.youtube.title') }}</a>
+          </h3>
+
+          <p>
+            {{ t('home.media.youtube.description') }}
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="sermon" data-aos="zoom-in-right" data-aos-duration="1000">
+
+        <div class="sermon-img">
+
+          <div class="sermon-media">
+
+            <img src="{{ asset('resources/images/Ministry Vacancies.jpg') }}" alt="Ministry Vacancies" />
+
+          </div>
+
+        </div>
+
+        <div class="sermon-data">
+
+          <ul>
+
+            <li>
+              {{ t('home.media.vacancies.label') }}
+            </li>
+
+          </ul>
+
+          <h3>
+            <a href="sermon-detail.html">{{ t('home.media.vacancies.title') }}</a>
+          </h3>
+
+          <p>
+            {{ t('home.media.vacancies.description') }}
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="sermon" data-aos="zoom-in-right" data-aos-duration="1000">
+
+        <div class="sermon-img">
+
+          <div class="sermon-media">
+
+            <img
+              src="{{ asset('resources/images/Subscribe-to-our-weekly-newsletter.png') }}"
+              alt="Subscribe to our Newsletter"
+            />
+
+          </div>
+
+        </div>
+
+        <div class="sermon-data">
+
+          <ul>
+
+            <li>
+              {{ t('home.media.newsletter.label') }}
+            </li>
+
+          </ul>
+
+          <h3>
+            <a
+              href="https://chinesechurch.us18.list-manage.com/subscribe?u=66513027ef7e5ce2b15346e36&id=cb9eff4eb9"
+            >{{ t('home.media.newsletter.title') }}</a>
+          </h3>
+
+          <p>
+            {{ t('home.media.newsletter.description') }}
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Recent Sermons One End -->
+
+<!-- Events Carousal Start -->
+
+<section class="gap events-carousal">
+
+  <div class="container">
+
+    <div class="heading">
+
+      <p>
+        {{ t('home.events.subtitle') }}
+      </p>
+
+      <h2>
+        {{ t('home.events.title') }}
+      </h2>
+
+    </div>
+
+  </div>
+
+  <div class="">
+
+    <div class="events-carousal-slider">
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-1.jpg') }}" alt="Event Image 2" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-9.jpg') }}" alt="Event Image 3" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-3.jpg') }}" alt="Event Image 4" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-4.jpg') }}" alt="Event Image 5" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-5.jpg') }}" alt="Event Image 6" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-6.jpg') }}" alt="Event Image 7" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-2.jpg') }}" alt="Event Image 8" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-8.jpg') }}" alt="Event Image 9" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-11.jpg') }}" alt="Event Image 9" />
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="event">
+
+          <img src="{{ asset('resources/images/photo-12.jpg') }}" alt="Event Image 9" />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Events Carousal End -->
+
+<!-- Subscribe Start -->
+
+<section class="subscribe">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-5 col-md-12 col-sm-12">
+
+        <h3 class="text-white">
+          {{ t('home.subscribe.title') }}
+        </h3>
+
+        <p class="text-white">
+          {{ t('home.subscribe.description') }}
+        </p>
+
+      </div>
+
+      <div class="col-lg-7 col-md-12 col-sm-12">
+
+        <form>
+
+          <button
+            onclick="location.href='https://chinesechurch.us18.list-manage.com/subscribe?u=66513027ef7e5ce2b15346e36&id=cb9eff4eb9'"
+            type="button"
+            style="border: 1px solid white;"
+          >{{ t('home.subscribe.button') }}</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Subscribe End -->
+
+<!-- Scroll to top -->
+
+<button id="scrollTop" class="scrollTopStick">  <svg viewBox="0 0 490.523 490.523" fill="#fff" height="15">
+    <path
+      style="fill:#FFC107;"
+      d="M487.411,355.047L252.744,120.38c-4.165-4.164-10.917-4.164-15.083,0L2.994,355.047 c-4.093,4.237-3.976,10.99,0.262,15.083c4.134,3.993,10.687,3.993,14.821,0l227.115-227.115l227.115,227.136 c4.237,4.093,10.99,3.976,15.083-0.261c3.993-4.134,3.993-10.688,0-14.821L487.411,355.047z"
+    />
+    <path
+      d="M479.859,373.266c-2.831,0.005-5.548-1.115-7.552-3.115L245.192,143.015L18.077,370.151 c-4.237,4.093-10.99,3.976-15.083-0.262c-3.993-4.134-3.993-10.687,0-14.821l234.667-234.667c4.165-4.164,10.917-4.164,15.083,0 l234.667,234.667c4.159,4.172,4.148,10.926-0.024,15.085C485.388,372.146,482.681,373.265,479.859,373.266z"
+    />
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+  </svg></button>
+
+{{--
+    <script>
+
+    // Audio Player Start
+    document.addEventListener('DOMContentLoaded', function () {
+
+    if ($('.audio-player')[0]) {
+      function createTrackItem(index, name, duration) {
+        var trackItem = document.createElement('div')
+
+        trackItem.setAttribute('class', 'playlist-track-ctn')
+
+        trackItem.setAttribute('id', 'ptc-' + index)
+
+        trackItem.setAttribute('data-index', index)
+
+        document.querySelector('.playlist-ctn').appendChild(trackItem)
+
+        var playBtnItem = document.createElement('div')
+
+        playBtnItem.setAttribute('class', 'playlist-btn-play')
+
+        playBtnItem.setAttribute('id', 'pbp-' + index)
+
+        document.querySelector('#ptc-' + index).appendChild(playBtnItem)
+
+        var btnImg = document.createElement('i')
+
+        btnImg.setAttribute('class', 'fas fa-play')
+
+        btnImg.setAttribute('height', '40')
+
+        btnImg.setAttribute('width', '40')
+
+        btnImg.setAttribute('id', 'p-img-' + index)
+
+        document.querySelector('#pbp-' + index).appendChild(btnImg)
+
+        var trackInfoItem = document.createElement('div')
+
+        trackInfoItem.setAttribute('class', 'playlist-info-track')
+
+        trackInfoItem.innerHTML = name
+
+        document.querySelector('#ptc-' + index).appendChild(trackInfoItem)
+
+        var trackDurationItem = document.createElement('div')
+
+        trackDurationItem.setAttribute('class', 'playlist-duration')
+
+        trackDurationItem.innerHTML = duration
+
+        document.querySelector('#ptc-' + index).appendChild(trackDurationItem)
+      }
+
+      var listAudio = [
+        {
+          name: 'The Resurrection changes everything! - Mark Bailey',
+
+          file: "{{ asset('music/audio-2.mp3') }}",
+
+          duration: '08:47',
+        },
+
+        {
+          name: 'Fools for Christ - Mark Bailey',
+
+          file: "{{ asset('music/audio-4.mp3') }}",
+
+          duration: '05:53',
+        },
+
+        {
+          name: 'Love is not fair... - Andy Cowling',
+
+          file: "{{ asset('music/audio-3.mp3') }}",
+
+          duration: '08:47',
+        },
+
+        {
+          name: 'Life - Revised, Refereshed, Revealed - Martin Dickie',
+
+          file: "{{ asset('music/audio-1.mp3') }}",
+
+          duration: '05:53',
+        },
+
+        {
+          name: 'Whatever - Ana Beck',
+
+          file: "{{ asset('music/audio-5.mp3') }}",
+
+          duration: '08:47',
+        },
+      ]
+
+      for (var i = 0; i < listAudio.length; i++) {
+        createTrackItem(i, listAudio[i].name, listAudio[i].duration)
+      }
+
+      var indexAudio = 0
+
+      function loadNewTrack(index) {
+        var player = document.querySelector('#source-audio')
+
+        player.src = listAudio[index].file
+
+        document.querySelector('.title').innerHTML = listAudio[index].name
+
+        this.currentAudio = document.getElementById('myAudio')
+
+        this.currentAudio.load()
+
+        this.toggleAudio()
+
+        this.updateStylePlaylist(this.indexAudio, index)
+
+        this.indexAudio = index
+      }
+
+      var playListItems = document.querySelectorAll('.playlist-track-ctn')
+
+      for (let i = 0; i < playListItems.length; i++) {
+        playListItems[i].addEventListener('click', getClickedElement.bind(this))
+      }
+
+      function getClickedElement(event) {
+        for (let i = 0; i < playListItems.length; i++) {
+          if (playListItems[i] == event.target) {
+            var clickedIndex = event.target.getAttribute('data-index')
+
+            if (clickedIndex == this.indexAudio) {
+              // alert('Same audio');
+
+              this.toggleAudio()
+            } else {
+              loadNewTrack(clickedIndex)
+            }
+          }
+        }
+      }
+
+      document.querySelector('#source-audio').src = listAudio[indexAudio].file
+
+      document.querySelector('.title').innerHTML = listAudio[indexAudio].name
+
+      var currentAudio = document.getElementById('myAudio')
+
+      currentAudio.load()
+
+      currentAudio.onloadedmetadata = function () {
+        document.getElementsByClassName('duration')[0].innerHTML = this.getMinutes(
+          this.currentAudio.duration
+        )
+      }.bind(this)
+
+      var interval1
+
+      function toggleAudio() {
+        if (this.currentAudio.paused) {
+          document.querySelector('#icon-play').style.display = 'none'
+
+          document.querySelector('#icon-pause').style.display = 'block'
+
+          document.querySelector('#ptc-' + this.indexAudio).classList.add('active-track')
+
+          this.playToPause(this.indexAudio)
+
+          this.currentAudio.play()
+        } else {
+          document.querySelector('#icon-play').style.display = 'block'
+
+          document.querySelector('#icon-pause').style.display = 'none'
+
+          this.pauseToPlay(this.indexAudio)
+
+          this.currentAudio.pause()
+        }
+      }
+
+      function pauseAudio() {
+        this.currentAudio.pause()
+
+        clearInterval(interval1)
+      }
+
+      var timer = document.getElementsByClassName('timer')[0]
+
+      var barProgress = document.getElementById('myBar')
+
+      var width = 0
+
+      // 获取音频元素并绑定事件
+      var currentAudio = document.getElementById('myAudio');
+      currentAudio.addEventListener('timeupdate', onTimeUpdate);
+
+      function onTimeUpdate() {
+        var t = currentAudio.currentTime
+
+        timer.innerHTML = getMinutes(t)
+
+        setBarProgress()
+
+        if (currentAudio.ended) {
+          document.querySelector('#icon-play').style.display = 'block'
+
+          document.querySelector('#icon-pause').style.display = 'none'
+
+          pauseToPlay(indexAudio)
+
+          if (indexAudio < listAudio.length - 1) {
+            var index = parseInt(indexAudio) + 1
+
+            loadNewTrack(index)
+          }
+        }
+      }
+
+      function setBarProgress() {
+        var progress = (this.currentAudio.currentTime / this.currentAudio.duration) * 100
+
+        document.getElementById('myBar').style.width = progress + '%'
+      }
+
+      function getMinutes(t) {
+        var min = parseInt(parseInt(t) / 60)
+
+        var sec = parseInt(t % 60)
+
+        if (sec < 10) {
+          sec = '0' + sec
+        }
+
+        if (min < 10) {
+          min = '0' + min
+        }
+
+        return min + ':' + sec
+      }
+
+      var progressbar = document.querySelector('#myProgress')
+
+      progressbar.addEventListener('click', seek.bind(this))
+
+      function seek(event) {
+        var percent = event.offsetX / progressbar.offsetWidth
+
+        this.currentAudio.currentTime = percent * this.currentAudio.duration
+
+        barProgress.style.width = percent * 100 + '%'
+      }
+
+      function forward() {
+        this.currentAudio.currentTime = this.currentAudio.currentTime + 5
+
+        this.setBarProgress()
+      }
+
+      function rewind() {
+        this.currentAudio.currentTime = this.currentAudio.currentTime - 5
+
+        this.setBarProgress()
+      }
+
+      function next() {
+        if (this.indexAudio < listAudio.length - 1) {
+          var oldIndex = this.indexAudio
+
+          this.indexAudio++
+
+          updateStylePlaylist(oldIndex, this.indexAudio)
+
+          this.loadNewTrack(this.indexAudio)
+        }
+      }
+
+      function previous() {
+        if (this.indexAudio > 0) {
+          var oldIndex = this.indexAudio
+
+          this.indexAudio--
+
+          updateStylePlaylist(oldIndex, this.indexAudio)
+
+          this.loadNewTrack(this.indexAudio)
+        }
+      }
+
+      function updateStylePlaylist(oldIndex, newIndex) {
+        document.querySelector('#ptc-' + oldIndex).classList.remove('active-track')
+
+        this.pauseToPlay(oldIndex)
+
+        document.querySelector('#ptc-' + newIndex).classList.add('active-track')
+
+        this.playToPause(newIndex)
+      }
+
+      function playToPause(index) {
+        var ele = document.querySelector('#p-img-' + index)
+
+        ele.classList.remove('fa-play')
+
+        ele.classList.add('fa-pause')
+      }
+
+      function pauseToPlay(index) {
+        var ele = document.querySelector('#p-img-' + index)
+
+        ele.classList.remove('fa-pause')
+
+        ele.classList.add('fa-play')
+      }
+
+      function toggleMute() {
+        var btnMute = document.querySelector('#toggleMute')
+
+        var volUp = document.querySelector('#icon-vol-up')
+
+        var volMute = document.querySelector('#icon-vol-mute')
+
+        if (this.currentAudio.muted == false) {
+          this.currentAudio.muted = true
+
+          volUp.style.display = 'none'
+
+          volMute.style.display = 'block'
+        } else {
+          this.currentAudio.muted = false
+
+          volMute.style.display = 'none'
+
+          volUp.style.display = 'block'
+        }
+      }
+    }
+    })
+
+    // Audio Player End
+
+</script> --}}
 @end
+@end
+
+
