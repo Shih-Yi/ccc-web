@@ -1,0 +1,153 @@
+@layout.main()
+
+  @slot('main')
+    {{-- <div class="page-content-wrapper">
+      <div class="container py-5">
+        <article class="page-content">
+          <header class="mb-4">
+            <h1>{{ page.title }}</h1>
+          </header>
+
+          <div class="content">
+            @if(customTemplate)
+              @include(customTemplate)
+            @else
+              {{{ page.content }}}
+            @end
+          </div>
+        </article>
+      </div>
+
+
+    </div> --}}
+
+    <div class="page-content-wrapper">
+      <section class="gap blog-detail">
+
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-lg-8 col-md-12 col-sm-12">
+
+              <div class="blog-meta">
+
+                <h2>
+                  {{ (await page.getTranslation(i18n.locale))?.title || (await page.getTranslation('en'))?.title }}
+                </h2>
+
+              </div>
+
+              <div class="content">
+
+                @if(customTemplate)
+                  @include(customTemplate)
+                @else
+                  {{{ (await page.getTranslation(i18n.locale))?.content || (await page.getTranslation('en'))?.content }}}
+                @end
+
+              </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-sm-12">
+
+              <aside>
+
+                <div class="blog-sidebar">
+
+                  <div class="widget widget-categories">
+
+                    <h3>
+                      Related Pages
+                    </h3>
+
+                    <ul>
+                      @each(relatedPage in relatedPages)
+                        <li class="d-flex justify-content-between align-items-center light-bg">
+                          <div class="d-flex align-items-center w-100">
+                            <a
+                              href="{{ route('pages.show', [relatedPage.slug]) }}"
+                              class="font-semi-bold {{ page.id === relatedPage.id ? 'active' : '' }}"
+                            >
+                              {{ relatedPage.translations?.find(t => t.locale === i18n.locale)?.title || relatedPage.translations?.find(t => t.locale === 'en')?.title || '' }}
+                            </a>
+                          </div>
+                          @if(relatedPage.children?.length > 0)
+                            <button
+                              class="toggle-btn flex-all theme-bg-clr text-white font-semi-bold rounded-circle"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapse-{{ relatedPage.id }}"
+                              aria-expanded="true"
+                            >
+                              <i class="fas fa-chevron-down"></i>
+                            </button>
+                          @endif
+                        </li>
+                        @if(relatedPage.children?.length > 0)
+                          <div class="collapse show" id="collapse-{{ relatedPage.id }}">
+                            <ul class="sub-menu">
+                              @each(child in relatedPage.children)
+                                <li class="d-flex justify-content-between align-items-center light-bg">
+                                  <div class="d-flex align-items-center w-100">
+                                    <a
+                                      href="{{ route('pages.show', [child.slug]) }}"
+                                      class="font-semi-bold {{ page.id === child.id ? 'active' : '' }}"
+                                    >
+                                      {{ child.translations?.find(t => t.locale === i18n.locale)?.title || child.translations?.find(t => t.locale === 'en')?.title || '' }}
+                                    </a>
+                                  </div>
+                                  @if(child.children?.length > 0)
+                                    <button
+                                      class="toggle-btn flex-all theme-bg-clr text-white font-semi-bold rounded-circle"
+                                      data-bs-toggle="collapse"
+                                      data-bs-target="#collapse-{{ child.id }}"
+                                      aria-expanded="true"
+                                    >
+                                      <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                  @endif
+                                </li>
+                                @if(child.children?.length > 0)
+                                  <div class="collapse show" id="collapse-{{ child.id }}">
+                                    <ul class="sub-menu">
+                                      @each(grandChild in child.children)
+                                        <li class="d-flex justify-content-between align-items-center light-bg">
+                                          <div class="d-flex align-items-center w-100">
+                                            <a
+                                              href="{{ route('pages.show', [grandChild.slug]) }}"
+                                              class="font-semi-bold {{ page.id === grandChild.id ? 'active' : '' }}"
+                                            >
+                                              {{ grandChild.translations?.find(t => t.locale === i18n.locale)?.title || grandChild.translations?.find(t => t.locale === 'en')?.title || '' }}
+                                            </a>
+                                          </div>
+                                        </li>
+                                      @end
+                                    </ul>
+                                  </div>
+                                @endif
+                              @end
+                            </ul>
+                          </div>
+                        @endif
+                      @end
+                    </ul>
+
+                  </div>
+
+                </div>
+
+              </aside>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+
+  @end
+
+@end

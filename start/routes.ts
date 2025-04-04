@@ -12,9 +12,12 @@ import { middleware } from './kernel.js'
 import i18nManager from '@adonisjs/i18n/services/main'
 
 const HomeController = () => import('#controllers/home_controller')
+const PagesController = () => import('#controllers/pages_controller')
 
 // Public routes (no authentication required)
 router.get('/', [HomeController, 'index']).as('home')
+
+router.get('pages/:slug', [PagesController, 'show']).as('pages.show')
 
 // Language switcher
 router
