@@ -1,0 +1,31 @@
+{
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "error": "Invalid credentials"
+    },
+    "logout": "Logout",
+    "welcome": "Welcome, {name}"
+  },
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome to our website",
+    "description": "This is a website built with AdonisJS",
+    "features": {
+      "title": "Features",
+      "list": {
+        "1": "Multi-language Support",
+        "2": "Member System",
+        "3": "Admin Dashboard"
+      }
+    },
+    "cta": {
+      "login": "Login Now",
+      "register": "Register",
+      "learn_more": "Learn More"
+    }
+  }
+}

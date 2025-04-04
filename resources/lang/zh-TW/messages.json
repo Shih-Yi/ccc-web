@@ -1,0 +1,31 @@
+{
+  "auth": {
+    "login": {
+      "title": "登入",
+      "email": "電子郵件",
+      "password": "密碼",
+      "submit": "登入",
+      "error": "帳號或密碼錯誤"
+    },
+    "logout": "登出",
+    "welcome": "歡迎，{name}"
+  },
+  "home": {
+    "title": "首頁",
+    "welcome": "歡迎來到我們的網站",
+    "description": "這是一個使用 AdonisJS 建立的網站",
+    "features": {
+      "title": "功能特色",
+      "list": {
+        "1": "多語言支援",
+        "2": "會員系統",
+        "3": "後台管理"
+      }
+    },
+    "cta": {
+      "login": "立即登入",
+      "register": "註冊帳號",
+      "learn_more": "了解更多"
+    }
+  }
+}
