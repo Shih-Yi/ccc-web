@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrfToken }}" />
+    <title>
+      Admin Dashboard - {{ title || 'Admin Area' }}
+    </title>
+    @vite(['resources/js/admin/admin-app.js'])
+  </head>
+  <body>
+    <div class="wrapper">
+      @include('partials/admin/admin-nav')
+      @include('partials/admin/admin-sidebar')
+
+      {{-- Flash Messages --}}
+      @include('partials/flash')
+
+      {{-- Main Content --}}
+      {{{ await $slots.main() }}}
+      @include('partials/admin/admin-footer')
+    </div>
+  </body>
+</html>

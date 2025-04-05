@@ -1,0 +1,64 @@
+@layout.auth()
+  @slot('main')
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="text-end mb-3 dropdown">
+            <button
+              class="btn btn-link dropdown-toggle text-decoration-none"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-globe"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="{{ route('language', { locale: 'en' }) }}">
+                  <i class="flag-icon flag-icon-us me-2"></i>English
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ route('language', { locale: 'zh-TW' }) }}">
+                  <i class="flag-icon flag-icon-tw me-2"></i>中文
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-center mb-4">
+                {{ t('messages.auth.login.title') }}
+              </h3>
+
+              @if(flashMessages.has('errors.form'))
+                <div class="alert alert-danger">
+                  {{ t('messages.auth.login.error') }}
+                </div>
+              @endif
+              
+              <form action="{{ route('admin.auth.login.store') }}" method="POST">
+                @!component('components/csrf')
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">{{ t('messages.auth.login.email') }}</label>
+                  <input type="email" class="form-control" id="email" name="email" required />
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label">{{ t('messages.auth.login.password') }}</label>
+                  <input type="password" class="form-control" id="password" name="password" required />
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                  {{ t('messages.auth.login.submit') }}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  @end
+@end

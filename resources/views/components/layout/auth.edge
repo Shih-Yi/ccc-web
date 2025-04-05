@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ i18n.locale }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title ?? t('messages.auth.login.title') }}</title>
+  @vite(['resources/js/app.js'])
+</head>
+<body>
+  <main>
+    {{{ await $slots.main() }}}
+  </main>
+  <!-- Debug info -->
+  <div style="display:none">
+    Template: 'layouts/auth'
+    Time: {{ new Date().toISOString() }}
+  </div>
+</body>
+</html>
