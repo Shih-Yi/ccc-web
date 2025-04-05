@@ -13,6 +13,7 @@ import i18nManager from '@adonisjs/i18n/services/main'
 
 const HomeController = () => import('#controllers/home_controller')
 const PagesController = () => import('#controllers/pages_controller')
+const UploadsController = () => import('#controllers/admin/uploads_controller')
 
 // Public routes (no authentication required)
 router.get('/', [HomeController, 'index']).as('home')
@@ -32,3 +33,10 @@ router
     return response.redirect().back()
   })
   .as('language')
+
+router
+  .group(() => {
+    router.post('/files/upload', [UploadsController, 'upload'])
+  })
+  .prefix('/admin')
+  .middleware([middleware.auth({ guards: ['admin'] }), middleware.admin()])
