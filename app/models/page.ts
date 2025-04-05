@@ -1,11 +1,11 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column, belongsTo, hasMany, beforeSave } from '@adonisjs/lucid/orm'
+import { BaseModel, column, belongsTo, hasMany, beforeCreate, computed } from '@adonisjs/lucid/orm'
 import type { BelongsTo, HasMany } from '@adonisjs/lucid/types/relations'
-import string from '@adonisjs/core/helpers/string'
+import PageTranslation from './page_translation.js'
 
 // Define PageType outside the class
-const PAGE_TYPE_VALUES = ['about', 'im_new', 'whats_on', 'connect', 'library'] as const
-type PageType = (typeof PAGE_TYPE_VALUES)[number]
+export const PAGE_TYPE_VALUES = ['about', 'im_new', 'whats_on', 'connect', 'library'] as const
+export type PageType = (typeof PAGE_TYPE_VALUES)[number]
 
 export default class Page extends BaseModel {
   static readonly PAGE_TYPES = PAGE_TYPE_VALUES
@@ -20,13 +20,7 @@ export default class Page extends BaseModel {
   declare type: PageType
 
   @column()
-  declare title: string
-
-  @column()
   declare slug: string
-
-  @column()
-  declare content: string | null
 
   @column()
   declare order: number
@@ -53,31 +47,66 @@ export default class Page extends BaseModel {
   @hasMany(() => Page, { foreignKey: 'parentId' })
   declare children: HasMany<typeof Page>
 
-  @beforeSave()
-  public static async generateSlug(page: Page) {
-    if (page.title && !page.slug) {
-      // Convert title to slug format
-      // "About Our Church" -> "about-our-church"
-      page.slug = string.dashCase(page.title)
-    }
+  @hasMany(() => PageTranslation)
+  declare translations: HasMany<typeof PageTranslation>
+
+  @beforeCreate()
+  public static async setOrder(page: Page) {
+    const count = await Page.query().count('*').first()
+
+    // new page order = total pages + 1
+    page.order = Number(count?.$extras.count ?? 0) + 1
   }
 
   /**
    * Get navigation structure for all page types
    */
-  static async getNavigation(): Promise<Record<PageType, Page[]>> {
-    const navigation: Partial<Record<PageType, Page[]>> = {}
+  static async getNavigation(): Promise<Page[]> {
+    // get all first level pages
+    const allFirstLevelPages = await this.query()
+      .whereNull('parent_id')
+      .where('is_active', true)
+      .preload('translations')
+      .preload('children', (childrenQuery) => {
+        childrenQuery
+          .where('is_active', true)
+          .preload('translations')
+          .preload('children', (grandchildrenQuery) => {
+            grandchildrenQuery
+              .where('is_active', true)
+              .preload('translations')
+              .orderBy('order', 'asc')
+          })
+          .orderBy('order', 'asc')
+      })
+      .orderBy('order', 'asc')
 
-    for (const type of this.PAGE_TYPES) {
-      navigation[type] = await this.query()
-        .where('type', type)
-        .whereNull('parent_id')
-        .preload('children', (childrenQuery) => {
-          childrenQuery.preload('children')
-        })
-        .orderBy('order')
-    }
+    const navigation = allFirstLevelPages.sort((a, b) => a.order - b.order)
+    // sort all first level pages by order
+    return navigation
+  }
 
-    return navigation as Record<PageType, Page[]>
+  // 方便取得特定語言的翻譯
+  async getTranslation(locale: string) {
+    return await PageTranslation.query().where('page_id', this.id).where('locale', locale).first()
+  }
+
+  @computed()
+  get isFirstLevel() {
+    return this.parentId === null
+  }
+
+  get isSecondLevel() {
+    return this.parentId !== null && this.parent?.parentId === null
+  }
+
+  @computed()
+  get hasChildren() {
+    return this.children?.length > 0
+  }
+
+  @computed()
+  get englishTitle() {
+    return this.translations?.find((t) => t.locale === 'en')?.title || ''
   }
 }
