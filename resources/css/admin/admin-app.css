@@ -1,0 +1,45 @@
+/* @import "~bootstrap/scss/bootstrap"; */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "admin-lte";
+@import 'sweetalert2/dist/sweetalert2.css';
+@import "toastr/build/toastr.min.css";
+/* @import 'trix/dist/trix.css'; */
+/* @import "actiontext.css"; */
+/* @import "login.css"; */
+/* @import "sidebar.css"; */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.main-content {
+  min-height: 100vh;
+}
+
+/* Brand styling */
+.brand-link {
+  text-decoration: none;
+  padding: 15px;
+}
+
+.brand-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.brand-text {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Remove hover underline */
+.brand-link:hover {
+  text-decoration: none;
+}

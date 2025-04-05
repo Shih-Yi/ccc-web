@@ -1,0 +1,220 @@
+<form method="POST" action="{{ formAction }}">
+  {{ csrfField() }}
+  {{-- Language Tabs --}}
+  <div class="d-flex justify-content-between align-items-center">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="en-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#en-content"
+          type="button"
+          role="tab"
+        >English</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="zh-tw-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#zh-tw-content"
+          type="button"
+          role="tab"
+        >繁體中文</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="zh-cn-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#zh-cn-content"
+          type="button"
+          role="tab"
+        >简体中文</button>
+      </li>
+    </ul>
+    <div class="d-flex">
+      <a href="{{ route('admin.pages.index') }}" class="btn btn-secondary me-2">
+        <i class="fas fa-times me-2"></i>Cancel
+      </a>
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-save me-2"></i>{{ page ? 'Update' : 'Create' }} Page
+      </button>
+    </div>
+  </div>
+
+  {{-- Tab Content --}}
+  <div class="tab-content mt-3">
+    {{-- English --}}
+    <div class="tab-pane fade show active" id="en-content" role="tabpanel">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input
+          type="text"
+          name="translations[en][title]"
+          class="form-control"
+          value="{{ page?.translations?.find(t => t.locale === 'en')?.title || '' }}"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Content</label>
+        <textarea name="translations[en][content]" class="form-control editor" rows="30">{{ page?.translations?.find(t => t.locale === 'en')?.content || '' }}</textarea>
+      </div>
+    </div>
+
+    {{-- 繁體中文 --}}
+    <div class="tab-pane fade" id="zh-tw-content" role="tabpanel">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input
+          type="text"
+          name="translations[zh_TW][title]"
+          class="form-control"
+          value="{{ page?.translations?.find(t => t.locale === 'zh-TW')?.title || '' }}"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Content</label>
+        <textarea name="translations[zh_TW][content]" class="form-control editor" rows="30">{{ page?.translations?.find(t => t.locale === 'zh-TW')?.content || '' }}</textarea>
+      </div>
+    </div>
+
+    {{-- 简体中文 --}}
+    <div class="tab-pane fade" id="zh-cn-content" role="tabpanel">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input
+          type="text"
+          name="translations[zh_CN][title]"
+          class="form-control"
+          value="{{ page?.translations?.find(t => t.locale === 'zh-CN')?.title || '' }}"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Content</label>
+        <textarea name="translations[zh_CN][content]" class="form-control editor" rows="30">{{ page?.translations?.find(t => t.locale === 'zh-CN')?.content || '' }}</textarea>
+      </div>
+    </div>
+  </div>
+
+  {{-- Type --}}
+  <div class="mb-3">
+    <label for="type" class="form-label">Type <span class="text-danger">*</span></label>
+
+    {{-- 顯示用 select --}}
+    <select
+      class="form-select"
+      id="type"
+      required
+      {{ page && (page.parentId==null || page.children?.length > 0) ? 'disabled' : 'name=type' }}
+    >
+      @each(type in types)
+        <option value="{{ type }}" {{ page?.type === type ? 'selected' : '' }}>
+          {{ type }}
+        </option>
+      @end
+    </select>
+
+    {{-- 當 disabled 時使用 hidden input --}}
+    @if(page && (page.parentId==null || page.children?.length > 0))
+      <input type="hidden" name="type" value="{{ page.type }}" />
+    @end
+  </div>
+
+  {{-- Parent --}}
+  <div class="mb-3">
+    <label for="parentId" class="form-label">Parent Page <span class="text-danger">*</span></label>
+
+    {{-- 顯示用 select --}}
+    <select
+      class="form-select"
+      id="parentId"
+      required
+      {{ page && (page.parentId==null || page.children?.length > 0) ? 'disabled' : 'name=parentId' }}
+    >
+      <option value="">
+        No Parent
+      </option>
+      @each(parentOption in parentPages)
+        <option
+          value="{{ parentOption.id }}"
+          data-type="{{ parentOption.type }}"
+          {{ page?.parentId === parentOption.id ? 'selected' : '' }}
+        >
+          {{ parentOption.translations?.find(t => t.locale === 'en')?.title || '' }}
+        </option>
+      @end
+    </select>
+
+    {{-- 當 disabled 時使用 hidden input --}}
+    @if(page && (page.parentId==null || page.children?.length > 0))
+      <input type="hidden" name="parentId" value="{{ page.parentId || '' }}" />
+    @end
+  </div>
+
+  <div class="mb-3">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="isActive"
+        name="isActive"
+        value="true"
+        onchange="this.form.isActive.value = this.checked ? 'true' : 'false'"
+        {{ page?.isActive ? 'checked' : '' }}
+      />
+      <label class="form-check-label" for="isActive">
+        Active
+      </label>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <a href="{{ route('admin.pages.index') }}" class="btn btn-secondary">
+      Cancel
+    </a>
+    <button type="submit" class="btn btn-primary">
+      {{ page ? 'Update' : 'Create' }} Page
+    </button>
+  </div>
+</form>
+
+<script>
+  // Update parent page options when page type is selected
+  document.getElementById("type").addEventListener("change", function() {
+    const selectedType = this.value;
+    const parentSelect = document.getElementById("parentId");
+    const options = parentSelect.querySelectorAll("option");
+    let firstMatchingOption = null;
+    options.forEach(option => {
+      if (option.value === "") {
+        // Always show "No Parent" option
+        option.style.display = "";
+      } else {
+        // Show only options with matching type
+        const matches = option.dataset.type === selectedType;
+        option.style.display = matches ? "" : "none";
+        // 記錄第一個符合的選項
+        if (matches && !firstMatchingOption) {
+          firstMatchingOption = option;
+        }
+      }
+    });
+    // If current selected parent is not of the same type
+    const currentSelected = parentSelect.selectedOptions[0];
+    if (currentSelected && currentSelected.value !== "" && currentSelected.dataset.type !== selectedType) {
+      // 如果有符合的選項就選擇第一個，否則選擇 "No Parent"
+      if (firstMatchingOption) {
+        parentSelect.value = firstMatchingOption.value;
+      } else {
+        parentSelect.value = "";
+      }
+    }
+  });
+  // Trigger on page load if editing
+
+  if (document.getElementById("type").value) {
+    document.getElementById("type").dispatchEvent(new Event("change"));
+  }
+</script>

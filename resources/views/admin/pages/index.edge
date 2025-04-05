@@ -18,56 +18,56 @@
         --l3-badge-bg: var(--bs-info);
         --l3-badge-text: white;
       }
-
+      
       .row-l1 {
         --bs-table-bg: rgb(13, 110, 253, 0.1) !important;
         --bs-table-striped-bg: rgba(13, 110, 253, 0.05) !important;
         --bs-table-hover-bg: rgba(13, 110, 253, 0.1) !important;
       }
-
+      
       .row-l2 {
         --bs-table-bg: rgba(25, 135, 84, 0.05) !important;
         --bs-table-striped-bg: rgba(25, 135, 84, 0.1) !important;
         --bs-table-hover-bg: rgba(25, 135, 84, 0.15) !important;
       }
-
+      
       .row-l3 {
         --bs-table-bg: rgba(13, 202, 240, 0.05) !important;
         --bs-table-striped-bg: rgba(13, 202, 240, 0.1) !important;
         --bs-table-hover-bg: rgba(13, 202, 240, 0.15) !important;
       }
-
+      
       /* 套用顏色到相應元素 */
-
+      
       .l1-icon {
         color: var(--l1-text);
       }
-
+      
       .l1-badge {
         background-color: var(--l1-badge-bg) !important;
         color: var(--l1-badge-text) !important;
       }
-
+      
       .l2-icon {
         color: var(--l2-text);
       }
-
+      
       .l2-badge {
         background-color: var(--l2-badge-bg) !important;
         color: var(--l2-badge-text) !important;
       }
-
+      
       .l3-icon {
         color: var(--l3-text);
       }
-
+      
       .l3-badge {
         background-color: var(--l3-badge-bg) !important;
         color: var(--l3-badge-text) !important;
       }
-
+      
       /* 自定義 Bootstrap table-secondary 顏色 */
-
+      
       .table-secondary {
         --bs-table-bg: rgba(13, 110, 253, 0.1) !important;
         /* 背景色 */
@@ -189,7 +189,7 @@
                         </td>
                       </tr>
                     @end
-
+                    
                     {{-- Child rows (L2 and L3) --}}
                     @if(page.parentId)
                       <tr
@@ -278,7 +278,7 @@
 
     {{-- 引入 Sortable.js --}}
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js">
-
+      
     </script>
 
     <script>
