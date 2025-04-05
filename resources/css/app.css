@@ -1,64 +1,4 @@
-
-
-/*
-Table of content
-1. Google font
-2. General Style
-    2.1 Loader
-3. Header One
-4. Header Two
-5. Header Three
-6. Hero One
-7. Hero Two
-8. Fellowship
-9. About One
-10. About Two
-11. About Three
-12. Recent Sermons One
-13. Digital Ministry
-14. Events Carousal
-15. Donation
-16. Blog
-17. Sponsors
-18. Subscribe
-19. Footer One
-20. CountDown
-21. About Two
-22. Church Prayers
-23. Recent Sermons Two
-24. Pastor
-25. Church Memories
-26. Causes Of Church
-27. Mass Timing
-28. Subscribe Two
-29. Hero Three
-30. LiveStream
-31. Event Three
-32. Support Us
-33. Footer Three
-34. Church Products
-35. Page 404
-36. Contact Us
-37. About Us
-   37.1- Pray
-38. Pastor Detail
-39. Our Ministries
-   39.1- Social Media
-   39.2- Catholic Church
-40. Cause Detail
-41. Event Detail
-42. Sermon Detail
-43. Blog Detail
-44. Circle Slider
-45. Audio
-46. Donation Model
-47. Product Detail
-48. Donation Page
-*/
-
 @import "@fortawesome/fontawesome-free/css/all.min.css";
-
-/* Google Font Karla  */
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap');
 /*  General Style  */
 *,
@@ -84,11 +24,51 @@ html {
 small{
    font-family: 'Karla', sans-serif;
 }
-ul,
+
+/* # colour 1 */
+:root {
+  --primary-color: #CC936C;
+  --secondary-color: #DEB594;
+}
+
+/* # colour 2 */
+:root {
+  --primary-color: #ECD1C3;
+  --secondary-color: #DEB594;
+}
+
+/* # colour 3 */
+/* :root {
+  --primary-color: #5E887B;
+  --secondary-color: #d8e8e2;
+} */
+
+
+/* # colour 4 */
+:root {
+  --primary-color: #70a292;
+  --secondary-color: #C6D5D0;
+}
+
+/* # colour 5 */
+/* :root {
+  --primary-color: #DBB7BB;
+  --secondary-color: #f4dbde;
+} */
+
+
+
+
+/* ul,
 li{
-    list-style: none;
+    list-style: disc;
     padding: 0;
     margin: 0;
+} */
+.desktop-nav nav .nav-bar ul,
+.desktop-nav nav .nav-bar li {
+    list-style: none;
+
 }
 a,
 a:hover{
@@ -1024,8 +1004,8 @@ button.scrollTopStick.active {
 }
 .top-bar {
     padding: 15px 0;
-    border-bottom: 5px solid #d98d39;
-    background-color: #b1712a;
+    border-bottom: 5px solid var(--secondary-color);
+    background-color: var(--primary-color);
 }
 .top-bar .row{
     align-items: center;
@@ -1049,7 +1029,7 @@ button.scrollTopStick.active {
     position: relative;
     display: inline-flex;
 }
-.top-bar ul.login li:nth-child(1):before{
+/* .top-bar ul.login li:nth-child(1):before{
     content: "";
     background-color: #bfb2a1;
     width: 1px;
@@ -1057,7 +1037,7 @@ button.scrollTopStick.active {
     position: absolute;
     top: 0;
     right: -35px;
-}
+} */
 .top-bar ul.login li a img {
     width: 20px;
     margin-right: 10px;
@@ -1127,7 +1107,7 @@ button.scrollTopStick.active {
     align-items: center;
 }
 .desktop-nav nav .nav-bar > ul > li > a{
-    font-size: 18px;
+    font-size: 18.5px;
     line-height: 28px;
     color: #333;
     font-weight: 500;
@@ -1233,10 +1213,12 @@ button.scrollTopStick.active {
 .desktop-nav nav .nav-bar ul > li.menu-item-has-children ul.sub-menu li a:hover svg {
     fill: #fdfdfd;
 }
-.desktop-nav nav .nav-bar ul > li ul.sub-menu li:nth-child(even) a {
+.desktop-nav nav .nav-bar ul > li ul.sub-menu .second-level {
     background-color: #ebebeb;
+    border-color: #ebebeb;
+    border: 2px solid #ffffff;
 }
-.desktop-nav nav .nav-bar ul > li ul.sub-menu li:nth-child(even) a:hover{
+.desktop-nav nav .nav-bar ul > li ul.sub-menu .second-level:hover{
     background-color: transparent;
 }
 .desktop-nav nav .nav-bar ul > li ul.sub-menu {
@@ -1653,6 +1635,7 @@ button.scrollTopStick.active {
   justify-content: center;
 }
 @media (max-width: 991px) {
+
   .blesso_banner_part .blesso_banner_slider .swiper-slide {
     min-height: 600px;
     max-height: 100vh;
@@ -1867,7 +1850,7 @@ button.scrollTopStick.active {
 /* About Two Start */
 .about-two .about-info {
     margin-bottom: 65px !important;
-    width: 50%;
+    width: 70%;
 }
 .about-two .about-info h2 {
     line-height: 52px;
@@ -3125,6 +3108,14 @@ img.sideimage {
 /* LiveStream End */
 
 /* Event Three Start */
+.event-three {
+  padding: 80px 0 120px;
+}
+.event-three .heading {
+  padding: 30px 0 0;
+}
+
+
 .event-three .event .event-data {
     position: absolute;
     padding: 0 30px 30px 30px;
@@ -3134,6 +3125,7 @@ img.sideimage {
     -o-transform: translateY(130px);
     bottom: 0px;
     height: auto;
+    width: 100%;
 }
 .event-three .event .event-data .event img{
     height: auto;
@@ -3927,6 +3919,12 @@ img.sideimage {
 /* Cause Detail End */
 
 /* Event Detail Start */
+.event-title {
+    margin-top: 10px;
+}
+.event-three-icon {
+  background-color: #fff !important;
+}
 .event-detail .event-meta > ul > li > svg {
     width: 45px;
     height: 45px;
@@ -4292,23 +4290,23 @@ ul.author-s-medias{
     right: -7px;
     z-index: -1;
 }
-.widget-recent-articles ul li img {
+.widget-categories ul li img {
     width: 110px;
     height: 110px;
     margin-right: 10px;
 }
-.widget-recent-articles .post-date {
+.widget-categories .post-date {
     font-size: 16px;
     padding: 1px 11px;
     text-transform: uppercase;
 }
-.widget-recent-articles a {
+.widget-categories a {
     font-size: 19px;
     line-height: 24px;
     color: #333;
     margin-top: 5px;
 }
-.widget-recent-articles ul li:not(:last-child){
+.widget-categories ul li:not(:last-child){
     margin-bottom: 20px;
 }
 .widget-categories ul li a{
@@ -4328,13 +4326,33 @@ ul.author-s-medias{
     position: relative;
     z-index: 0;
     overflow: hidden;
-}
-.widget-categories ul li:before {
+    transition: all 0.3s ease;
+  }
+
+  .widget-categories ul li:before {
     background-color: rgb(171 142 102 / 40%);
-}
-.widget-categories ul li:not(:last-child){
+  }
+
+  .widget-categories ul li:not(:last-child) {
     margin-bottom: 3px;
-}
+  }
+
+  .widget-categories ul li a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  .widget-categories .flex-all {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .theme-bg-clr {
+    background-color: var(--primary-color);
+  }
 .widget-popular-posts a {
     font-size: 20px;
     line-height: 23px;
@@ -4805,6 +4823,9 @@ a.next-slide.nav-active {
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     left: -13px;
+}
+.mobile-nav > ul > li.menu-item-has-children.active > ul.sub-menu li:has(.third-level-menu):before {
+  top: 15px;
 }
 .res-log {
     margin-bottom: 30px;
@@ -5975,3 +5996,521 @@ input[type=number]::-webkit-outer-spin-button {
    margin-bottom: 50px;
 }
 /* Donation Page End */
+.theme-clr,
+.desktop-nav nav .nav-bar ul li a:hover,
+.offer h3 a:hover,
+.sermon-data ul li,
+.sermon-data h3 a:hover,
+.donation-form ul li a:focus,
+.blog-meta a:hover,
+.footer-one .contact span,
+.copy-right span,
+.footer-one ul.quick-links li a:hover,
+.footer-one ul.footer-events li a:hover,
+.subscribe form button:hover,
+.about-two .extras a:hover,
+.sermon-two ul li,
+.recent-sermon-two .sermon-two a:hover,
+.causes-of-church .prices p span,
+.causes-of-church .don-box a.theme-btn,
+.subscribe-two .data p span,
+.sidetwo .contacts p.theme-clr,
+.footer-three .social-area ul li a:hover,
+.footer-main-content p span,
+.product .product-description a:hover,
+.content ul li span,
+.ministry a:hover,
+.cause-detail .cause-meta span,
+ul.meta,
+.pagination ul li a:hover,
+.blog-detail ul.blog-author li a:hover,
+.widget-popular-posts a:hover,
+.widget-popular-posts .blog-meta li:first-child,
+.widget-trending-videos > ul > li > a:hover,
+.widget-trending-videos > ul > li > ul.blog-meta li,
+.widget-trending-videos > ul > li > ul.blog-meta li:first-child:before,
+.active-track > .playlist-info-track,
+.active-track >.playlist-duration,
+.active-track > .playlist-btn-play,
+.widget-categories ul li a:hover,
+.theme-dark-clr,
+.pd-edition ul li a:focus,
+.pd-cat-tags ul li ul.pd-cat li a:hover,
+.pd-cat-tags ul li ul.pd-tag li a:hover,
+.total-donation-amount .total_amount input,
+.pastor-meta p.designation{
+color: var(--primary-color);
+}
+
+blockquote,
+.theme-bg-clr,
+.theme-btn,
+.offer span,
+.desktop-nav .donation a.pr-cart:before,
+.about-gallery figure:before,
+.gallery figure:before,
+.prayers-slider ul.slick-dots li.slick-active,
+.sermon-img ul li a:focus,
+.event:hover .event-data,
+.donation-form .custom-donation-amount span,
+.blog-meta ul li.date,
+.subscribe,
+.subscribe form button,
+.about-two .extras span,
+.sermon-grid ul li a:focus,
+.pastor .profile:hover .meta,
+.causes-of-church .don-box a.theme-btn:hover,
+.sidetwo .icon,
+.livestream .data .title .countdown #countdown #tiles > span,
+.footer-three .social-area ul li span,
+.footer-gallery figure:before,
+.product .product-actions a,
+.social-medias ul li a:hover,
+#nav-icon4 span,
+.s-medias ul li a,
+.cause-detail .cause-meta .theme-btn:hover,
+ul.sermon-icons li a:hover,
+.sermon-grid>ul>li a:hover,
+.tags ul li a:hover,
+.desktop-nav nav .nav-bar ul > li ul.sub-menu li a:before,
+.desktop-nav nav .nav-bar ul > li.menu-item-has-children ul.sub-menu:before,
+a.next-slide.nav-active:before,
+a.next-slide:before,
+.playlist-track-ctn.active-track .playlist-btn-play,
+#btn-faws-play-pause,
+.audio-player.style2 #myProgress #myBar,
+.cart-popup .cart-btns a:hover,
+.cart-popup:before,
+button.scrollTopStick,
+.mobile-nav .donation a.cart:before,
+.header-two .logo a,
+.sermon-img ul li a:hover,
+.hero-one-slider button.slick-arrow,
+.mobile-nav > ul > li.menu-item-has-children.active > ul.sub-menu li:before,
+.pray:before,
+.pd-stars p,
+.pd-content ul.pd-tabs li a:before,
+.payment-method .form-check-input:checked,
+.personal-info .dp-agree input:checked,
+.prog-bar .progress .progress-bar{
+  background-color: var(--primary-color);
+}
+
+
+.theme-clr-blue,
+.green-overlay:before,
+.slider-data,
+.sermon-img ul,
+.custom-donation-amount input,
+.sermon-grid ul,
+.mass-timing .table thead,
+.donation-type select,
+.video-box:before,
+.header-two .desktop-nav nav:before,
+.header-two .desktop-nav nav:after,
+.green-bg{
+	background-color: #111;
+}
+
+.theme-bdr-clr,
+.dg-counter:before,
+.donation-form ul li a:focus,
+.subscribe form button,
+.livestream .data .title .countdown #countdown #tiles > span,
+.event-three .event:hover .event-data:before,
+.footer-three,
+.desktop-nav nav .nav-bar ul > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul,
+.cart-popup .cart-btns a:hover,
+.mobile-nav > ul > li.menu-item-has-children.active,
+.causes-of-church .don-box a.theme-btn,
+.cart-popup .cart-btns a.checkout,
+.hero-one-slider button.slick-arrow,
+.pd-colors ul li a:focus,
+.pd-edition ul li a:focus,
+.specs-features,
+.reviews-slider ul.slick-dots li.slick-active button,
+.post-review .review-form form input:focus,
+.post-review .review-form form textarea:focus,
+.post-review .review-form form textarea:focus-visible,
+.pd-cart-heart .heart:hover,
+.payment-method .form-check-input:checked,
+.personal-info input:focus,
+.personal-info select:focus,
+.total-donation-amount .total_amount input,
+.personal-info .dp-agree input:checked{
+border-color: var(--primary-color);
+}
+
+
+.desktop-nav nav .nav-bar > ul > li > a:hover svg,
+.pastor-meta ul li svg,
+.event-meta > ul > li > svg,
+.pd-cart-heart .heart:hover svg,
+.preloader svg, .about-three .counter-three .box svg {
+	fill: var(--primary-color);
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+/* Logo styles */
+.logo {
+  max-width: 85px;  /* Limit maximum width */
+  height: auto;      /* Maintain image aspect ratio */
+  object-fit: contain; /* Ensure full image display */
+}
+
+
+/* Third level page styles */
+.third-level-menu a,
+.third-level {
+  color: #718096 !important;
+  font-weight: normal !important;
+  font-size: 1em !important;
+  background-color: transparent !important;  /* Remove background */
+  padding: 13px 15px !important;
+}
+
+.third-level:hover {
+  color: white !important;
+}
+
+/* Menu structure styles */
+.third-level-menu {
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #e2e8f0;
+  background-color: transparent !important;  /* Ensure third level menu container is also transparent */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .desktop-nav .logo img {
+    max-width: 80px;  /* Show smaller on mobile */
+  }
+}
+
+/* Mobile logo */
+.mobile-nav .res-log img {
+  max-width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Main content padding for fixed header */
+.page-content-wrapper {
+  /* Desktop */
+  margin-top: 80px; /* Adjust based on your navbar height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-content-wrapper {
+    margin-top: 120px; /* Mobile navbar is usually smaller */
+  }
+}
+
+/* Ensure minimum content area height to avoid short pages */
+.page-content-wrapper {
+  min-height: calc(100vh - 160px); /* Viewport height minus header height */
+}
+
+.top-bar .dropdown-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.top-bar .dropdown-toggle::after {
+  display: none;  /* 移除預設的下拉箭頭 */
+}
+
+.top-bar .dropdown-toggle .fa-chevron-down {
+  font-size: 0.8rem;  /* 調整箭頭大小 */
+  transition: transform 0.2s;  /* 添加旋轉動畫 */
+}
+
+.top-bar .dropdown.show .dropdown-toggle .fa-chevron-down {
+  transform: rotate(180deg);  /* 點擊時箭頭旋轉 */
+}
+
+.top-bar .dropdown-menu {
+  display: none;  /* 預設隱藏 */
+  min-width: 150px;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  background: #fff;
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.top-bar .dropdown-menu.show {
+  display: block;  /* 只有在 show class 時才顯示 */
+}
+
+.top-bar .dropdown-item {
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+
+.top-bar .dropdown-item:hover,
+.top-bar .dropdown-item:focus {
+  background-color: #f8f9fa;
+}
+
+.top-bar .dropdown-item.active {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+
+/* 限制內容區域的圖片大小 */
+.content img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block; /* 讓圖片獨占一行 */
+  margin: 1rem 0; /* 上下間距 */
+}
+
+/* 如果需要讓圖片置中 */
+.content img.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 頂部通知欄的文字樣式 */
+.top-bar .login li a {
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: justify;
+}
+
+.top-bar .login li a img {
+  flex-shrink: 0;
+}
+
+.widget-categories .active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-nav .nav-item {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-nav .btn-toggle {
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  border: 0;
+  color: var(--primary-color);
+}
+
+.sidebar-nav .btn-toggle i {
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+}
+
+.sidebar-nav .btn-toggle[aria-expanded="true"] i {
+  transform: rotate(90deg);
+}
+
+.sidebar-nav .btn-toggle-nav {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.sidebar-nav .nav-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  color: var(--primary-color);
+}
+
+/* 第三層縮排 */
+.sidebar-nav .btn-toggle-nav .btn-toggle-nav {
+  padding-left: 1.5rem;
+}
+
+/* 調整第二層和第三層的間距 */
+.sidebar-nav .btn-toggle-nav li {
+  margin-top: 0.25rem;
+}
+
+/* 第一層 active */
+/* .sidebar-nav > .nav-item > div > div > .active {
+  color: #first_level_color;
+} */
+
+/* 第二層 active */
+/* .sidebar-nav .btn-toggle-nav > li > div > .active {
+  color: #second_level_color;
+} */
+
+/* 第三層 active */
+/* .sidebar-nav .btn-toggle-nav .btn-toggle-nav > li > .active {
+  color: #third_level_color;
+} */
+
+/* 側邊欄連結的 active 狀態 */
+.widget-categories .nav-link.active {
+  color: var(--primary-color);  /* 或其他你想要的顏色 */
+  font-weight: bold;
+}
+
+/* hover 效果 */
+.widget-categories .nav-link:hover {
+  color: #8a5720;  /* 稍微深一點的顏色 */
+}
+
+/* 子選單樣式 */
+.widget-categories .sub-menu {
+  padding-left: 0;
+  margin-top: 3px;
+  width: 100%;
+}
+
+/* 確保子選單項目也有相同的基本樣式 */
+.widget-categories .sub-menu li {
+  height: 58px;
+  border-radius: 100px;
+  margin-bottom: 3px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* 子選單項目的背景效果 */
+.widget-categories .sub-menu li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+
+/* Toggle 按鈕樣式 */
+.widget-categories .toggle-btn {
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.widget-categories .toggle-btn i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.widget-categories .toggle-btn[aria-expanded="false"] i {
+  transform: rotate(-90deg);
+}
+
+/* 第二層選單特別樣式 - 不內縮 */
+.widget-categories > ul > div > .sub-menu {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* 第三層選單特別樣式 - 有內縮 */
+.widget-categories .sub-menu .sub-menu {
+  padding-left: 20px;
+}
+
+/* 第三層項目樣式 - 稍微不同 */
+.widget-categories .sub-menu .sub-menu > li {
+  background-color: rgba(177, 113, 42, 0.04);
+  border-left: 4px solid rgba(177, 113, 42, 0.3);
+}
+
+/* 第一層項目樣式 - 背景深一點 */
+.widget-categories > ul > li {
+  background-color: rgba(177, 113, 42, 0.15);
+
+}
+
+/* 第二層項目樣式 */
+.widget-categories .sub-menu > li {
+  background-color: rgba(177, 113, 42, 0.08);
+}
+
+/* 第二層項目樣式 */
+.widget-categories .sub-menu > li {
+  background-color: rgba(177, 113, 42, 0.08);
+   position: relative;
+   overflow: hidden;
+   transition: all 0.3s ease;
+}
+
+/* 第二層和第三層的背景動畫效果 */
+.widget-categories .sub-menu > li:before,
+.widget-categories .sub-menu .sub-menu > li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(177, 113, 42, 0.05);
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* Hover 效果 */
+.widget-categories .sub-menu > li:hover:before,
+.widget-categories .sub-menu .sub-menu > li:hover:before {
+  transform: translateX(0);
+}
+
+/* Active 效果 */
+.widget-categories .sub-menu > li:has(.active):before,
+.widget-categories .sub-menu .sub-menu > li:has(.active):before {
+  transform: translateX(0);
+  background-color: rgba(177, 113, 42, 0.1);
+}
+
+/* 取消選單項目的 marker */
+.menu-item-has-children::marker,
+.menu-item-has-children li::marker,
+.sub-menu li::marker {
+  content: none;
+  display: none;
+}
+
+li.menu-item-has-children > ul.sub-menu > li::marker {
+  content: none;
+  display: none;
+}
+
+.icon-book {
+  fill: var(--primary-color);
+}
+
+

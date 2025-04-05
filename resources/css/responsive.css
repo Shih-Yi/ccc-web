@@ -1,0 +1,3551 @@
+@media (min-width: 992px)  {
+	.w-100{
+		width: 100%;
+	}
+	.w-95{
+
+    width: 95%;
+
+	}
+
+	.w-90{
+
+	    width: 90%;
+
+	}
+
+	.w-85{
+
+	    width: 85%;
+
+	}
+
+	.w-80{
+
+	    width: 80%;
+
+	}
+	.w-75{
+		width: 75%;
+	}
+	.w-70{
+
+	    width: 70%;
+
+	}
+
+	.w-60{
+
+	    width: 60%;
+
+	}
+
+	.w-65{
+
+		width: 65%;
+
+	}
+
+	.w-55{
+
+	    width: 55%;
+
+	}
+
+	.w-45{
+
+	    width: 45%;
+
+	}
+
+	.w-40{
+
+	    width: 40%;
+
+	}
+
+	.w-35{
+
+	    width: 35%;
+
+	}
+
+}
+
+@media (max-width: 1920px) {
+
+	.desktop-nav nav:before {
+
+	    left: -52px;
+
+	}
+
+	.desktop-nav nav:after {
+
+	    right: -52px;
+
+	}
+
+}
+
+@media (max-width: 1700px) {
+
+	.donation-data {
+
+	    margin: 0;
+
+	    padding: 80px;
+
+	}
+
+	img.sideimage {
+
+	    position: absolute;
+
+	    top: 0;
+
+	    right: 50vw;
+
+	}
+
+	.donation-data {
+
+	    width: 100%;
+
+	}
+
+}
+
+@media (max-width: 1600px) {
+
+	.hero-two .hero-data p {
+
+	    width: 40%;
+
+	}
+
+	.hero-two .hero-data h1 {
+
+	    font-size: 110px;
+
+	}
+
+	.hero-2-shape.img-moving {
+
+	    margin-top: -315px;
+
+	    height: 450px;
+
+	}
+
+}
+
+@media (max-width: 1400px) {
+	.blog-meta p {
+	    width: 100%;
+	}
+
+	.hero-two .hero-data h1 {
+
+	    font-size: 90px;
+
+	    line-height: 90px;
+
+	    margin-bottom: 20px;
+
+	}
+
+	.hero-two .hero-data p {
+
+	    width: 50%;
+
+	}
+
+	.footer-one ul.footer-events li {
+
+	    width: 100%;
+
+	}
+
+	.event-data h4 a {
+
+	    font-size: 23px;
+
+	    line-height: 33px;
+
+	}
+
+	.event-data {
+	    padding: 25px;
+	    transform: translateY(135px);
+	}
+
+	.event {
+
+    	margin-right: 30px;
+
+	}
+
+	.donation-data {
+	    margin: 0 45px;
+	    padding: 100px 0;
+	}
+	.blog .loadmore {
+	    margin-top: 45px;
+	}
+
+}
+
+@media (max-width: 1370px) {
+	.event-three .event:hover .event-data::before {
+	    top: -75px;
+	    border-bottom: 95px solid var(--primary-color);;
+	    border-right: 60px solid transparent;
+	    border-right: 370px solid transparent;
+	}
+	.author .author-meta {
+	    padding: 30px 40px 25px;
+	}
+	.widget-instagram-photos ul li {
+	    width: 46%;
+	}
+	.widget-popular-posts a {
+	    width: 100%;
+	}
+	blockquote span {
+	    width: 25%;
+	}
+	blockquote {
+	    padding: 40px 40px 40px 40px;
+	}
+	.pastor-meta ul.cont-acts li p{
+	    width: 50%;
+	}
+	.our-ministries .heading h2 {
+	    width: 100%;
+	}
+	.contact-us .content ul li {
+	    width: 80%;
+	}
+	.contacts ul {
+	    width: 70%;
+	}
+	.about-us .services-online .contacts ul {
+	    width: 75%;
+	}
+	.pastor-content .progress {
+	    width: 45%;
+	    margin-right: 0;
+	}
+	.about-us .content p,
+	.about-us .content h2,
+	.catholic-church .prog-part {
+	    width: 100%;
+	}
+	.header-two .desktop-nav nav:after {
+	    left: -100vw;
+	}
+	.header-two .desktop-nav nav:before {
+	    left: 0;
+	}
+	.contact-us h2 {
+	    width: 60%;
+	}
+	.pray .pray-data h2 {
+	    width: 80%;
+	}
+	.subscribe-two .data h2 {
+	    margin-bottom: 20px;
+	}
+	.about-three .counter-three .box {
+	    padding: 50px;
+	}
+	.c-slider p {
+	    width: 92%;
+	}
+	.nav-c-slider {
+	    margin-left: 75px;
+	}
+	.events-carousal .event > img {
+	    height: 430px;
+	}
+	.about-three .sideone p {
+	    width: 95%;
+	}
+	.sermon-media {
+	    height: 330px;
+	}
+	.hero-data h1, .blesso_banner_content_shape h1 {
+	    font-size: 70px;
+	    line-height: 80px;
+	}
+
+	.hero-two .hero-data p {
+
+	    width: 50%;
+
+	}
+
+	.hero-two .hero-data {
+
+	    width: 100vw;
+	    opacity: 1;
+
+	}
+
+	.hero-2-shape.img-moving {
+
+	    margin-top: -250px;
+
+	    height: 340px;
+
+	}
+
+	.donation-data {
+
+	    width: 80%;
+
+	}
+
+	.top-bar ul.login li:nth-child(1) {
+
+	    margin-right: 50px;
+
+	}
+	.subscribe-two .data p {
+
+	    width: 70%;
+
+	}
+
+	.about-two .about-info {
+
+	    width: 70%;
+
+	}
+	.pastor-overlay {
+
+	    margin-bottom: -60px;
+
+	}
+
+	.mass-timing .expand {
+
+	    width: 82%;
+
+	}
+
+	.product {
+
+	    padding: 30px 25px 30px;
+
+	}
+
+
+	.about-two .about-info h2 {
+
+	    line-height: 50px;
+
+	    width: 80%;
+
+	    margin: auto;
+
+	}
+
+
+	.about-data p {
+
+	    margin-bottom: 30px;
+
+	    width: 90%;
+
+	}
+
+	.digital-ministry {
+
+	    padding-bottom: 150px;
+
+	}
+
+	.recent-sermon-one .loadmore {
+
+	    margin-top: 30px;
+
+	}
+
+	.dg-counter:before {
+
+	    height: 200px;
+
+	}
+
+	.dg-counter h3 {
+
+	    font-size: 70px;
+
+	    margin-bottom: 10px;
+
+	}
+	.blog .loadmore {
+
+	    margin-top: 50px;
+
+	}
+
+	.sermon-img ul li a img {
+
+	    width: 22px;
+
+	    height: 22px;
+
+	}
+
+	.sermon-data {
+
+    	padding: 0 50px;
+
+	}
+
+	.donation-form {
+
+    	margin-top: 30px;
+
+	}
+
+	.donation-data p {
+
+    	width: 100%;
+
+	}
+	.subscribe p {
+	    font-size: 16px;
+	    line-height: 28px;
+	}
+
+
+	.donation-form ul li a {
+
+	    padding: 15px;
+
+	}
+
+	.donation-data {
+	    margin: 0;
+	    padding: 100px 80px 100px 35px;
+	}
+	.donation-data {
+	    width: 100%;
+	}
+	.event-data {
+	    padding: 25px 25px 40px;
+	    transform: translateY(150px);
+	}
+	.events-carousal .heading h2 {
+	    width: 62%;
+	}
+	.digital-ministry h2 {
+	    width: 100%;
+	}
+	.fellowship h2 {
+
+	    width: 70%;
+
+	}
+	.offer p {
+	    width: 100%;
+	}
+	.about-one .about-data h2 {
+	    width: 90%;
+	}
+	.causes-of-church .don-box h3 {
+
+	    width: 100%;
+
+	}
+
+	.mass-timing .expand {
+
+	    width: 95%;
+
+	}
+
+	.hero-three .data .tittle h1 {
+
+	    font-size: 70px;
+
+	    width: 70%;
+
+	}
+
+	.hero-three .data .tittle {
+	    top: 62%;
+	    margin-left: 50px;
+	}
+
+	.audio-player.style2 .player-ctn {
+
+	    padding: 25px 0;
+
+	}
+
+	.audio-player.style2  .btn-mute {
+
+	    flex-basis: 30%;
+
+	}
+
+	.audio-player.style2 #btn-faws-play-pause {
+
+	    width: 70px;
+
+	    height: 70px;
+
+	}
+
+	.event-three .event .event-data h4 a {
+
+	    width: 95%;
+
+	}
+
+
+	.page-404 {
+
+	    padding-top: 300px;
+
+	    padding-bottom: 150px;
+
+	}
+
+	.pastor-meta h3 {
+
+	    font-size: 40px;
+
+	}
+
+	ul.check-list li, ul.heart-list li, ul.church-list li {
+
+	    line-height: 35px;
+
+	}
+
+	ul.check-list li:before, ul.heart-list li:before, ul.church-list li:before {
+
+	    width: 20px;
+
+	    height: 20px;
+
+	}
+
+	.about-us .church-about-img img {
+
+	    left: -200px;
+
+	}
+
+	.church-about-img-two img {
+
+	    top: 70px;
+
+	}
+
+	.about-us .services-online .contacts:not(:last-child) {
+
+	    margin-bottom: 30px;
+
+	}
+
+	.about-us .services-online .contacts:not(:last-child) {
+
+	    margin-top: 30px;
+
+	}
+
+	.about-us .services-online .icon {
+
+	    width: 90px;
+
+	    height: 90px;
+
+	}
+	.recent-sermon-two .sermon-two {
+	    padding-right: 20px;
+	}
+	.view-all {
+	    width: 100%;
+	}
+	.causes-of-church h2{
+		width: 45%;
+	}
+	.footer-one ul.footer-events li figure {
+	    margin-right: 18px;
+	    min-width: 90px;
+	    min-height: 90px;
+	}
+	.footer-one ul.footer-events li {
+	    margin-bottom: 20px;
+	    align-items: flex-start;
+	}
+	.footer-one ul.footer-events li p.post-date {
+	    margin-top: 5px;
+	}
+	.footer-one ul.footer-events li p.post-date::before {
+	    content: url("../images/calendar-clr.svg");
+	    width: 18px;
+	    height: 18px;
+	}
+	.footer-one .part-one {
+	    padding-bottom: 75px;
+	}
+
+}
+
+@media (max-width: 1200px) {
+	.post-review .select-ratings {
+	    flex-wrap: wrap;
+	}
+	.clients-reviews .review{
+		flex-wrap: wrap;
+	}
+	.clients-reviews .review-data,
+	.total-ratings > div {
+	    margin-top: 30px;
+	    margin-left: 0;
+	}
+	.specs-features > div {
+	    width: 100%;
+	}
+	.pd-data,
+	.post-review .review-form,
+	.post-review .total-ratings {
+    	width: 100%;
+	}
+
+	.widget-instagram-photos ul li {
+	    width: 45%;
+	}
+	.causes-of-church h2 {
+	    width: 60%;
+	}
+	.about-two .about-info {
+	    width: 80%;
+	}
+	.donation-data {
+	    width: 90%;
+	}
+
+	.livestream .data .title .countdown .labels{
+
+		top: 60px;
+
+	}
+
+	.livestream .data .title h2 {
+
+	    font-size: 45px;
+
+	    line-height: 55px;
+
+	}
+
+	.livestream .data .title .countdown {
+
+	    padding-top: 30px;
+
+	}
+
+	.about-three .counter-three .box {
+
+	    padding: 30px 50px 30px 50px;
+
+	    width: 100%;
+
+	}
+
+	.countdown .labels {
+
+	    top: 75px;
+
+	    right: 50%;
+
+	    transform: translateX(50%);
+
+	}
+
+	.countdown #countdown {
+
+	    text-align: center;
+
+	    margin-top: 40px;
+
+	}
+
+	.counter-data {
+
+	    text-align: center;
+
+	}
+
+	.counter-data a {
+
+	    justify-content: center;
+
+	}
+
+	.counter-data ul {
+
+	    justify-content: center;
+
+	}
+
+	.header-two .desktop-nav nav {
+
+	    padding: 15px;
+	    background-color: #2e1b46;
+
+	}
+
+	.header-two .desktop-nav nav:before, .header-two .desktop-nav nav:after{
+
+		display: none;
+
+	}
+
+	.header-two .logo a img {
+
+	    width: 60%;
+
+	}
+
+	.header-two .logo a {
+
+	    width: 75px;
+
+	    height: 80px;
+
+	    position: initial;
+
+	}
+
+	#nav-icon4{
+
+		display: block;
+
+	}
+
+	.desktop-nav .nav-bar,
+
+	.desktop-nav .donation{
+
+		display: none;
+
+	}
+
+	.header-one .desktop-nav nav {
+
+	    padding: 20px;
+
+	}
+
+	.causes-of-church .don-box h3{
+
+		width: 100%;
+
+		font-size: 25px;
+
+	}
+
+	.causes-of-church .don-box a.theme-btn {
+
+	    padding: 10px 30px;
+
+	}
+
+	.causes-of-church .don-box {
+
+	    padding: 30px;
+
+	}
+
+	.recent-sermon-two .sermon-two {
+
+	    padding-right: 0;
+
+	}
+
+	.product .product-description a {
+
+	    font-size: 20px;
+
+	    line-height: 26px;
+
+	}
+
+	.product {
+
+	    padding: 20px;
+
+	}
+
+	.mass-timing .expand {
+
+	    width: 80%;
+
+	}
+
+	.donation-data {
+
+	    margin: 0 40px;
+
+	    padding: 40px 0;
+
+	}
+
+	ul.login {
+
+	    flex-wrap: wrap;
+
+	}
+
+	.top-bar ul.login li:nth-child(1):before {
+
+	    background-color: transparent;
+
+	}
+
+	.top-bar ul.login li:nth-child(1) {
+
+	    margin-bottom: 10px;
+
+	}
+
+}
+
+@media (max-width: 1024px) {
+	.writter-review .review {
+	    width: 80%;
+	}
+	.church-about-img-two img {
+	    width: 100%;
+	    left: 0;
+	    position: relative;
+	}
+	.about-us .church-about-img img {
+	    left: 0;
+	    width: 100%;
+	    position: relative;
+	}
+	.pastor-meta h3 {
+	    font-size: 35px;
+	}
+	.pastor-meta img.pastor-img {
+	    border: 10px solid white;
+	    margin-top: -270px;
+	    margin-left: 80px;
+	}
+	.event-detail .event-meta  ul  li:not(:last-child) {
+	    margin-right: 30px;
+	}
+	.event-detail .event-meta  ul  li {
+	    flex-wrap: wrap;
+	    justify-content: flex-start;
+	}
+	.event-detail .event-meta h2 {
+	    margin-bottom: 20px;
+	}
+	.event-detail .featured-area .register-now ul {
+	    width: 90%;
+	    flex-wrap: wrap;
+	}
+	.event-detail .featured-area .register-now ul li {
+	    width: 100%;
+	}
+	.event-detail .featured-area .register-now .theme-btn {
+	    margin-top: 20px;
+	}
+	.event-detail .content .event-p-list {
+	    margin-left: 20px;
+	}
+	ul.check-list li, ul.heart-list li, ul.church-list li {
+	    line-height: 28px;
+	}
+	.countdown #countdown #tiles > span{
+		width: 80px;
+		height: 80px;
+		font-size: 25px;
+	}
+	.livestream .data .title .countdown .labels {
+	    top: 45px;
+	}
+		.countdown .labels li {
+	    width: 95px;
+	}
+		.hero-three .data .tittle {
+	    top: 50%;
+	}
+	.hero-three .data .tittle h1 {
+	    font-size: 60px;
+	}
+	.countdown #countdown {
+	    margin-top: 20px;
+	}
+	.hero-two .hero-data p {
+
+	    width: 70%;
+
+	}
+
+	.our-ministries .heading h2 {
+	    line-height: 55px;
+	    font-size: 45px;
+	}
+
+	.livestream .data .title .countdown {
+
+	    padding-top: 0;
+
+	}
+
+	.nav-c-slider {
+
+	    margin-left: 0;
+
+	}
+
+	.event-three .event {
+
+	    min-height: 450px;
+
+	}
+
+	.event-three .event .event-data {
+
+	    padding: 20px;
+
+	}
+
+	.event-three .event .event-data h4 a {
+
+	    width: 100%;
+
+	    font-size: 25px;
+
+	}
+
+	.about-three .counter-three .box {
+
+	    padding: 30px;
+
+	    width: 100%;
+
+	}
+
+	.about-two .about-info h2 {
+
+	    line-height: 45px;
+
+	}
+
+	.support-us .w-80 {
+
+	    width: 100%;
+
+	}
+
+	.blog-meta > a {
+
+	    font-size: 24px;
+
+	}
+
+	.subscribe h3 {
+
+	    font-size: 25px;
+
+	}
+
+	h2 {
+
+	    font-size: 40px;
+
+	}
+	.donation-form {
+	    width: 100%;
+	}
+	.donation-form .theme-btn,
+	.loadmore a.theme-btn {
+	    padding: 18px 50px;
+	}
+	.footer-one ul.quick-links li a {
+	    font-size: 17px;
+	}
+	.footer-one ul.footer-events li a {
+	    font-size: 17px;
+	    line-height: 22px;
+	}
+	.footer-one ul.footer-events li p.post-date {
+	    font-size: 14px;
+	    margin-top: 5px;
+	}
+	.events-carousal .heading h2 {
+
+	    line-height: 50px;
+
+	    font-size: 40px;
+
+	}
+
+	.sermon-data h3 a {
+
+	    color: #111;
+
+	}
+
+	.about-one .about-data h2 {
+
+	    line-height: 45px;
+
+	}
+
+}
+
+@media (max-width: 992px) {
+  .third-level-menu {
+    border-left: none;
+  }
+	.select-amount.donation-form ul li:last-child {
+	    width: 70%;
+	}
+	.writter-review {
+	    padding: 50px 30px;
+	}
+	.writter-review .review p {
+	    font-size: 22px;
+	    line-height: 32px;
+	}
+	.writter-review .parallax {
+	    background-position: center right;
+	}
+	.specs-features > div,
+	.clients-reviews .review,
+	.total-ratings > div {
+	    padding: 30px;
+	}
+	.clients-reviews .review-data{
+		padding: 0;
+	}
+	.pd-content .recommended-data  .rd-img,
+	.pd-content .recommended-data  .left-side,
+	.writter-review .review{
+	    width: 100%;
+	}
+	.pd-data {
+	    margin-top: 50px;
+	}
+	.pd-content .recommended-data  .left-side {
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	}
+	.contact-us .map {
+	    margin-top: 70px;
+	}
+	.content {
+	    margin-bottom: 30px;
+	}
+	.church-about-img-two img,
+	.church-about-img img
+	 {
+	    display: none;
+	}
+	.pray .pray-data h2 {
+	    font-size: 35px;
+	    line-height: 45px;
+	    width: 100%;
+	}
+	ul.cont-acts {
+	    margin-top: 30px;
+	}
+	.pastor-meta {
+	    padding: 30px 20px;
+	}
+	.catholic-church .video-sec {
+	    margin-top: 30px;
+	}
+	.s-medias ul li {
+	    margin-right: 20px;
+	}
+	.event-detail .featured-area .register-now .theme-btn {
+	    padding: 10px 30px;
+	}
+	.event-detail .featured-area .register-now {
+	    position: relative;
+	}
+	.event-detail .event-meta > ul > li > svg {
+	    width: 35px;
+	    height: 35px;
+	    margin-bottom: 10px;
+	}
+	.event-detail .content .event-img-list {
+	    margin: 25px 0 0;
+	}
+	.event-detail .content .social-medias ul {
+	    flex-wrap: wrap;
+	}
+	.social-medias ul li a {
+	    margin-right: 8px;
+	    padding: 10px 30px;
+	    margin-bottom: 10px;
+	}
+	.sermon-meta .sermon-box{
+		flex-wrap: wrap;
+	}
+	.sermon-meta .sermon-box ul{
+		margin-top: 25px;
+	}
+	.pagination {
+	    padding-top: 30px;
+	    margin-top: 50px;
+	}
+	.pagination ul li span > a {
+	    width: 50px;
+	    height: 50px;
+	}
+	.pagination ul {
+	    display: initial;
+	    width: 100%;
+	    flex-wrap: wrap;
+	}
+	.event-three .event figure img {
+	    height: 430px;
+	}
+	.hero-three .data{
+		width: 100%;
+	}
+	.about-three .sideone p {
+	    width: 100%;
+	    margin-bottom: 30px;
+	}
+
+	.about-two .about-info h2 {
+	    width: 100%;
+	}
+	.hero-data h1{
+	    font-size: 60px;
+	    line-height: 70px;
+	}
+	.widget.widget-popular-posts ul li {
+	    width: 48%;
+	}
+	.widget.widget-popular-posts ul {
+	    display: flex;
+	    justify-content: space-between;
+	}
+	.widget-instagram-photos ul li {
+	    width: 48%;
+	}
+	.church-prayers .heading h2 {
+	    font-size: 45px;
+	    line-height: 55px;
+	    width: 100%;
+	}
+	.subscribe-two .data h2 {
+	    font-size: 45px;
+	    line-height: 55px;
+	    margin-bottom: 25px;
+	}
+	.sermon-data h3 {
+	    width: 100%;
+	}
+
+	.custom_container {
+
+	    margin-top: 130px;
+
+	}
+
+	.sermon .sermon-img ul{
+
+		visibility: visible;
+
+		opacity: 1;
+
+	}
+
+	.our-ministries .heading h2 {
+
+	    line-height: 50px;
+	    font-size: 40px;
+
+	}
+
+	.page-404 .search-error h2 {
+
+	    font-size: 200px;
+
+	    line-height: 210px;
+
+	}
+
+	.page-404 {
+
+	    padding-top: 200px;
+
+	    padding-bottom: 100px;
+
+	}
+
+	.hero-three .data .tittle h1 {
+
+	    font-size: 50px;
+
+	}
+
+	.audio-player.style2 .title {
+
+	    font-size: 17px;
+
+	    line-height: 26px;
+
+	}
+	.subscribe h3 {
+	    font-size: 40px;
+	}
+
+	.audio-player.style2  .btn-mute {
+
+	    flex-basis: 80%;
+
+	    width: 110px !important;
+
+	    margin-left: 10px;
+
+	}
+
+	.about-three .counter-three {
+
+	    padding-top: 100px;
+
+	    justify-content: center;
+
+	}
+
+	.c-slider p{
+
+		width: 100%;
+
+	}
+
+	.c-slider > div {
+
+	    margin-bottom: 40px;
+
+	}
+
+	.nav-c-slider {
+
+	    min-height: 480px;
+
+	    margin-left: 0;
+
+	       width: 70%;
+
+    	margin: auto;
+
+	}
+
+	.footer-three .social-area ul li a {
+
+	    margin-right: 10px;
+
+	}
+
+	.support-us .video-box h3 {
+
+	    font-size: 50px;
+
+	}
+
+	.support-us .w-50 {
+
+	    width: 100%;
+
+	}
+
+	.gap {
+
+	    padding: 80px 0;
+
+	}
+
+	.no-top{
+
+		padding-top: 0;
+
+	}
+
+	.no-bottom{
+
+		padding-bottom: 0;
+
+	}
+	.subscribe-two{
+		padding-top: 60px;
+	}
+	.top-bar {
+
+	    padding: 5px 0;
+
+	    height: 0;
+
+	    overflow: hidden;
+
+	    position: relative;
+
+	    display: none;
+
+	}
+
+	.top-bar:before{
+
+		content: "";
+
+		width: 20px;
+
+		height: 20px;
+
+		background-image: url('../images/down-arrow-bg-clr.svg');
+
+		background-repeat: no-repeat;
+
+		background-size: cover;
+
+		position: absolute;
+
+		bottom: 0;
+
+		left: 50%;
+
+		transform: translateX(-50%);
+
+	}
+
+	.desktop-nav nav:before,
+
+	.desktop-nav nav:after{
+
+		display: none;
+
+	}
+
+	.view-all {
+
+	    margin-top: 50px !important;
+
+	}
+
+	.event-three .event {
+
+	    min-height: auto;
+
+	}
+
+	.event-three {
+
+	    padding-bottom: 80px;
+
+	}
+
+	.view-all h2,
+
+	.event-three .event {
+
+	    margin-bottom: 30px;
+
+	}
+
+	.causes-of-church h2,
+
+	.about-three .counter-three .box {
+
+	    margin-bottom: 30px;
+
+	}
+
+	.about-two .about-info {
+
+	    margin-bottom: 50px !important;
+
+	    width: 100%;
+
+	}
+
+	.about-two .extras span {
+
+	    width: 150px;
+
+	    height: 150px;
+
+	}
+
+	.about-two .extras span svg {
+
+	    width: 75px;
+
+	    height: 75px;
+
+	}
+
+	.mass-timing .head {
+
+	    flex-wrap: wrap;
+
+	}
+
+	.mass-timing .head .meta {
+
+	    margin-bottom: 20px;
+
+	}
+
+	.mass-timing .meta h2 {
+
+	    font-size: 45px;
+
+	    line-height: 55px;
+
+	}
+
+	.pastor .profile,
+
+	.product,
+
+	.about-two .extras,
+
+	.church-prayers .quotes,
+
+	.footer-one .part-one > div:not(:last-child),
+
+	.fellowship .offer,
+
+	.blog-data,
+
+	.recent-sermon-two .sermon-two,
+
+	.causes-of-church .don-box {
+
+	    margin-bottom: 40px;
+
+	}
+
+	.pastor-overlay {
+
+	    margin-bottom: 0;
+
+	}
+
+	.pastor {
+
+	    padding-bottom: 100px;
+
+	}
+
+	.about-one .about-data h2 {
+
+	    line-height: 55px;
+
+	}
+
+	.top-bar ul.social-medias {
+
+	    justify-content: start;
+
+	    margin-top: 15px;
+
+	    border-top: 1px solid #ffffff40;
+
+	    padding-top: 15px;
+
+	}
+
+	.top-bar ul.social-medias li:first-child {
+
+	    padding-left: 0;
+
+	}
+
+	.blog .loadmore {
+
+	    margin-top: 30px;
+
+	}
+
+	.sermon-data {
+
+	    padding: 50px 40px;
+
+	}
+
+	.recent-sermon-one .loadmore {
+
+	    margin-top: 20px;
+
+	}
+
+	.sermon {
+
+	    flex-wrap: wrap;
+
+	}
+
+	.sermon-img,
+
+	.sermon-data {
+
+	    flex-basis: 100%;
+	    display: inherit;
+	    height: auto;
+
+	}
+
+	.about-gallery {
+
+	    margin-bottom: 15px;
+
+	    width: auto;
+
+	}
+
+	.about-data {
+
+	    margin-bottom: 50px;
+
+	}
+
+	.subscribe form {
+
+	    margin-top: 30px;
+
+	}
+
+	.dg-counter {
+
+	    margin: 50px 0;
+
+	}
+
+	.event-data {
+
+    	padding: 20px;
+
+    	transform: translateY(140px);
+
+	}
+
+	.blog .blog-meta{
+
+		margin-bottom: 30px;
+
+	}
+
+	img.sideimage {
+
+	    position: relative;
+
+	    right: 0;
+
+	}
+
+	.donation-data {
+	    margin: auto;
+	    padding: 80px 0;
+	    width: 60%;
+	}
+
+	.events-carousal .heading h2 {
+
+	    width: 80%;
+
+	}
+
+	.fellowship h2 {
+
+	    width: 100%;
+
+	}
+
+	h2 {
+
+	    font-size: 45px;
+
+	    line-height: 55px;
+
+	}
+
+	.heading h2 {
+
+	    font-size: 45px;
+
+	    line-height: 55px;
+
+	    margin-bottom: 30px !important;
+
+	}
+
+	.footer-one .part-one{
+
+		padding-bottom: 60px;
+
+	}
+
+	.playlist-btn-play {
+
+	    width: 55px;
+
+	}
+
+	#btn-faws-play-pause {
+
+	    width: 110px;
+
+	    height: 110px;
+
+	}
+
+	#btn-faws-play-pause i {
+
+	    font-size: 30px;
+
+	}
+
+	.audio-run {
+
+	    padding: 50px 10px 10px;
+
+	}
+	.infos-ctn {
+	    margin-top: 0;
+	}
+
+	.offer span {
+
+	    width: 110px;
+
+	    height: 110px;
+
+	}
+
+}
+
+@media (max-width: 768px) {
+	.start-donation form button.theme-btn {
+	    padding: 15px 50px;
+	}
+	.total-donation-amount {
+	    padding-left: 20px;
+	}
+	.total-donation-amount .total_amount input {
+	    width: 150px;
+	    height: 60px;
+	}
+	.donation-page .bg-grey {
+	    padding: 50px 0;
+	}
+	.select-amount.donation-form .custom-donation-amount span {
+	    width: 15%;
+	}
+	.personal-info .form-box {
+	    padding: 30px;
+	    margin-top: 30px;
+	}
+	.donation-type select {
+	    height: 60px;
+	}
+	.donation-form .custom-donation-amount span,
+	.donation-form .custom-donation-amount input {
+	    height: 60px;
+	}
+	.donation-form ul li a {
+	    padding: 10px;
+	}
+	.donation-form ul li a {
+	    line-height: 26px;
+	    font-size: 16px;
+	}
+	.pd-content ul.pd-tabs li {
+	    padding: 0 20px;
+	}
+	.pd-content {
+	    margin-top: 60px;
+	}
+	.pd-content ul.pd-tabs {
+	    margin-bottom: 30px;
+	}
+	.writter-review .review h2 {
+	    font-size: 35px;
+	}
+	.pd-content h3 {
+	    font-size: 30px;
+	    line-height: 40px;
+	}
+	.contact-us h2 {
+	    width: 90%;
+	}
+	.contact-us .social-medias ul {
+	    flex-wrap: wrap;
+	    justify-content: flex-start;
+	}
+	.cause-detail .cause-meta .theme-btn {
+	    padding: 15px 45px;
+	}
+	.cause-detail .cause-meta .donation-details {
+	    flex-wrap: wrap;
+	}
+	.cause-detail .cause-meta .donation-details ul {
+	    margin-bottom: 20px;
+	}
+	.cause-detail .cause-meta h2 {
+	    font-size: 35px;
+	    line-height: 45px;
+	}
+	.cause-detail ul.check-list, .cause-detail ul.heart-list {
+	    margin-top: 20px;
+	    width: 100%;
+	}
+	.cause-detail .all-list {
+	    flex-wrap: wrap;
+	}
+	.pastor-meta img.pastor-img {
+	    width: 40%;
+	    margin-top: -200px;
+	    margin-left: 50px;
+	}
+	.our-ministries .heading h2 {
+
+	    line-height: 45px;
+	    font-size: 35px;
+
+	}
+	.event-detail .content .event-video {
+	    margin: 20px 0;
+	}
+	.sermon-detail .sermon-meta ul.sermon-icons li a {
+	    width: 60px;
+	    height: 60px;
+	}
+	.sermon-detail .sermon-meta ul.sermon-icons li a svg {
+	    width: 20px;
+	    height: 20px;
+	}
+	.content .gallery {
+	    margin: 20px 0;
+	}
+	blockquote span {
+	    width: 30%;
+	}
+	.blog-detail .tags ul{
+		flex-wrap: wrap;
+	}
+	.blog-detail .tags ul li a {
+	    margin-top: 20px;
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	.author .author-meta {
+	    padding: 25px 0px 0;
+	}
+	.author {
+	    flex-wrap: wrap;
+	    padding: 25px 20px;
+	}
+	.blog-detail .tags {
+	    flex-wrap: wrap;
+	}
+	.comments .comment-data {
+	    padding: 20px 0;
+	}
+	.comments .comment {
+	    margin-top: 20px;
+	    flex-wrap: wrap;
+	    padding: 20px 20px 0;
+	}
+	.comments .comment-data > a {
+	    padding: 2px 13px;
+	    top: -20px;
+	    right: -20px;
+	}
+	.widget.widget-popular-posts ul {
+	    flex-wrap: wrap;
+	}
+	.widget.widget-popular-posts ul li {
+	    width: 100%;
+	}
+	.widget.widget-popular-posts ul ul.blog-meta {
+	    flex-wrap: inherit;
+	    justify-content: flex-start;
+	}
+	.widget.widget-popular-posts ul ul.blog-meta li {
+	    width: auto;
+	}
+	.widget-instagram-photos ul li {
+	    width: 47%;
+	}
+	.hero-three .audio-player.style2{
+		position: relative;
+	}
+	.about-data p {
+	    width: 100%;
+	}
+	.hero-data h1{
+	    font-size: 55px;
+	    line-height: 60px;
+	}
+	.donation-data {
+	    width: 90%;
+	}
+	.donation-form {
+	    width: 100%;
+	}
+	.heading h2 {
+	    font-size: 45px;
+	    line-height: 55px;
+	}
+
+	.hero-two .hero-data h1 {
+	    font-size: 65px;
+	    line-height: 75px;
+	    margin: 0;
+	}
+
+	.hero-two .hero-data p {
+
+	    width: 95%;
+	    font-size: 22px;
+	    line-height: 32px;
+
+	}
+	.hero-2-shape.img-moving {
+	    margin-top: -210px;
+	    height: 300px;
+	}
+	.header-two ul.contact-info {
+	    display: none;
+	}
+	.hero-data h1, .blesso_banner_content_shape h1 {
+
+	    font-size: 70px;
+
+	    line-height: 80px;
+
+	}
+
+	.livestream .data .title .countdown #countdown #tiles > span{
+
+		width: 80px;
+
+		height: 80px;
+
+	}
+
+	.livestream .data .title {
+
+	    width: 100%;
+
+	}
+
+	.livestream img {
+
+	    min-height: 400px;
+
+	    object-fit: cover;
+
+	}
+
+	.livestream .countdown .labels li {
+
+	    width: 94px;
+
+	}
+
+	.livestream .data .title .countdown .labels {
+
+	    top: 45px;
+
+	}
+
+	.countdown .labels {
+
+	    top: 65px;
+
+	}
+
+	.support-us .video-box h3 {
+
+	    font-size: 40px;
+
+	}
+
+	.support-us .video-box a.theme-btn {
+
+	    padding: 10px 35px;
+
+	}
+
+	.audio-player.style2 .player-ctn {
+
+	    flex-wrap: wrap;
+
+	    justify-content: center;
+
+	}
+
+	.btn-ctn {
+
+	    margin-bottom: 15px;
+
+	}
+
+	.audio-player.style2 .title {
+
+	    margin-bottom: 20px;
+
+	}
+
+	.audio-player.style2  .btn-mute {
+
+	    flex-basis: 12%;
+
+	}
+
+	.audio-player.style2 .infos-ctn,
+
+	.audio-player.style2 .audio-p-bar,
+
+	.audio-p-bar,
+
+	.btn-ctn{
+
+		width: 100%;
+
+	}
+
+	.support-us .video-box {
+
+	    padding: 100px 0;
+
+	}
+
+	.about-two .about-info {
+
+	    margin-bottom: 50px !important;
+
+	    width: 100%;
+
+	}
+
+	.footer-three .footer-gallery {
+
+	    flex-wrap: wrap;
+
+	    justify-content: center;
+
+	}
+
+	.footer-three .footer-gallery figure {
+
+	    margin-bottom: 15px;
+
+	}
+
+	.footer-three .social-area ul {
+
+	    padding: 15px 0;
+
+	    flex-wrap: wrap;
+
+	}
+
+	.footer-main-content {
+
+	    padding-top: 40px;
+
+	}
+
+	.footer-three .social-area ul li {
+
+	    margin-bottom: 15px;
+
+	    width: 100%;
+
+	    justify-content: start;
+
+	}
+
+	.countdown #countdown #tiles > span{
+
+	    width: 80px;
+
+	    height: 80px;
+
+	    font-size: 30px;
+
+	}
+
+	.countdown .labels li {
+
+	    width: 95px;
+
+	}
+
+	.countdown .labels {
+
+	    top: 50px;
+
+	}
+
+	.mass-timing .expand {
+
+	    overflow-x: auto;
+	    width: 70%;
+
+	}
+
+	.gap{
+
+		padding: 60px 0;
+
+	}
+
+	.no-top{
+
+		padding-top: 0;
+
+	}
+
+	.no-bottom{
+
+		padding-bottom: 0;
+
+	}
+	.about-three .counter-three {
+	    padding-top: 60px;
+	}
+	.nav-c-slider{
+		width: 100%;
+	}
+	.church-memories .loadmore {
+
+	    margin-top: 30px;
+
+	}
+
+	.subscribe-two .data{
+
+		width: 100%;
+
+	}
+
+	.mass-timing .meta h2 {
+
+	    font-size: 35px;
+
+	    line-height: 45px;
+
+	}
+
+	.church-prayers .quotes {
+
+	    flex-wrap: wrap;
+
+	    text-align: center;
+
+	    justify-content: center;
+
+	}
+
+	.church-prayers .quotes img {
+
+	    margin-bottom: 15px;
+
+	}
+
+	.church-prayers .heading h2 {
+
+	    font-size: 35px;
+	    line-height: 45px;
+
+	}
+
+	.hero-data h1 {
+
+	    font-size: 65px;
+
+	    line-height: 75px;
+
+	}
+
+	.footer-one ul.footer-events li a {
+
+	    font-size: 18px;
+
+	    line-height: 28px;
+
+	}
+
+
+
+	.sermon-data {
+
+	    padding: 40px 30px;
+
+	}
+
+	.footer-one .part-one > div:not(:last-child) {
+
+	    margin-bottom: 30px;
+
+	}
+
+	.footer-one ul.quick-links {
+
+	    margin-top: 15px;
+
+	}
+
+	.footer-one ul.footer-events {
+
+	    margin-top: 25px;
+
+	}
+
+	.footer-one img.footer-logo {
+
+	    margin-bottom: 25px;
+
+	}
+
+	.subscribe form {
+
+	    margin-top: 25px;
+
+	}
+
+	.subscribe form button {
+
+	    height: 60px;
+
+	}
+
+	.subscribe form input {
+
+	    height: 70px;
+
+	}
+
+	.causes-of-church .w-35{
+
+		width: 75%;
+
+	}
+
+	.page-404 .search-error h2 {
+
+	    font-size: 200px;
+
+	    line-height: 210px;
+
+	}
+
+	.page-404 {
+
+	    padding-top: 200px;
+
+	    padding-bottom: 100px;
+
+	}
+
+	.page-404 .search-error h2 span:before {
+
+	    width: 80px;
+
+	    height: 80px;
+
+	    position: absolute;
+
+	    bottom: 68px;
+
+	    left: 50%;
+
+	}
+
+	.banner h2 {
+
+	    font-size: 60px;
+
+	}
+
+}
+
+@media (max-width: 600px) {
+	.donation-form ul li {
+	    width: 15%;
+	}
+	.select-amount.donation-form ul li:last-child {
+	    width: 100%;
+	}
+	.select-amount.donation-form ul {
+	    flex-wrap: wrap;
+	    justify-content: center;
+	}
+	.select-amount.donation-form .custom-donation-amount span {
+	    width: 15%;
+	}
+	.donation-form ul li a {
+	    padding: 10px;
+	    font-size: 15px;
+	}
+	.pd-content ul.pd-tabs li {
+	    padding: 0 20px;
+	}
+	.social-medias ul li a {
+	    margin-right: 8px;
+	    padding: 8px 20px;
+	    margin-bottom: 10px;
+	}
+	.social-medias ul li {
+	    font-size: 17px;
+	}
+	.cause-detail .content {
+	    margin-top: 15px !important;
+	}
+	.cause-detail .cause-meta h2 {
+	    font-size: 30px;
+	    line-height: 40px;
+	}
+	.cause-detail .cause-meta .theme-btn {
+	    padding: 12px 35px;
+	    color: white;
+	}
+	.pastor-meta img.pastor-img {
+	    margin-top: -140px;
+	    margin-left: 30px;
+	    width: 40%;
+	}
+	.pastor-meta h3 {
+	    margin-top: 20px;
+	    line-height: 50px;
+	}
+	.pastor-meta ul.cont-acts li p {
+	    width: 100%;
+	}
+	.pastor-meta img.pastor-img {
+	    border: 7px solid white;
+	}
+	.pastor-content h3 {
+	    margin-top: 45px;
+	}
+	.s-medias ul:before {
+	    height: 105%;
+	}
+	.catholic-church .video-sec .video {
+	    margin-bottom: 30px;
+	    padding-left: 0;
+	}
+	.s-medias ul {
+	    flex-wrap: wrap;
+	    justify-content: flex-start;
+	}
+	.s-medias ul li{
+		margin-bottom: 20px;
+	}
+	.event-detail .event-meta ul {
+	    flex-wrap: wrap;
+	}
+	.event-detail .event-meta > ul > li {
+	    margin-bottom: 10px;
+	}
+	.event-detail .featured-area {
+	    margin-top: 25px;
+	}
+	.event-detail .featured-area .register-now ul li {
+	    width: 100%;
+	    flex-wrap: wrap;
+	}
+	.event-detail .featured-area .register-now ul li .organizers {
+	    margin-right: 0;
+	    margin-bottom: 15px;
+	}
+	.pagination ul li a {
+	    font-size: 20px;
+	    line-height: 28px;
+	}
+	.sermon-detail .sermon-meta ul.sermon-icons li a {
+	    width: 50px;
+	    height: 50px;
+	}
+	.sermon-meta .sermon-box ul {
+	    margin-top: 15px;
+	}
+	.content {
+	    margin-top: 20px !important;
+	}
+	.pagination ul li:first-child {
+	    margin-bottom: 20px;
+	}
+	blockquote span {
+	    margin-right: 20px;
+	    width: 70%;
+	}
+	.event-three .event .event-data:before {
+	    border-right: 515px solid transparent;
+	}
+	.event-three .event .event-data {
+		width: 100%;
+	}
+	.hero-three .data .tittle h1 {
+	    width: 100%;
+	}
+	.subscribe-two .data h2 {
+	    font-size: 40px;
+	    line-height: 50px;
+	    margin-bottom: 15px;
+	}
+	.causes-of-church .don-box {
+	    margin-right: 25px;
+	    margin-left: 25px;
+	}
+	.mass-timing .head a.theme-btn {
+	    padding: 15px 35px;
+	}
+	.events-carousal .heading h2 {
+	    width: 100%;
+	}
+		.events-carousal .event > img {
+	    height: 330px;
+	}
+	.event-data {
+	    transform: translateY(200px);
+	}
+	.event-data h4 a {
+	    font-size: 20px;
+	    line-height: 30px;
+	}
+	h2,
+	.heading h2 {
+	    font-size: 35px;
+	    line-height: 45px;
+	}
+		.about-one .about-data h2 {
+	    line-height: 45px;
+	}
+	.hero-data h1 {
+	    font-size: 50px;
+	    line-height: 59px;
+	}
+	.hero-one-slider button.slick-arrow {
+	    width: 40px;
+	    height: 40px;
+	    top: 90%;
+	}
+	.hero-one-slider button.slick-prev.slick-arrow {
+	    left: 40%;
+	}
+	.hero-one-slider button.slick-next.slick-arrow {
+	    right: 40%;
+	}
+	.hero-data {
+		text-align: center;
+    	width: 100vw;
+    	margin-top: -1%;
+    	margin-left: 0;
+	}
+
+	.hero-three .data .tittle h1 {
+
+	    font-size: 50px;
+
+	}
+
+	.header-two ul.contact-info {
+
+	    flex-wrap: wrap;
+
+	}
+
+	.header-two ul.contact-info li {
+
+	    width: 100%;
+
+	}
+
+	.header-two ul.contact-info li:not(:last-child){
+
+	    margin-bottom: 10px;
+
+	}
+
+	.mobile-nav {
+
+	    width: 100%;
+
+	}
+
+	.hero-two .hero-data h1 {
+
+	    font-size: 70px;
+
+	    line-height: 60px;
+
+	}
+
+	.hero-two .hero-data p {
+
+	    font-size: 20px;
+
+	    line-height: 30px;
+
+	}
+
+	.hero-2-shape.img-moving {
+	    margin-top: -180px;
+	    height: 250px;
+	}
+
+	.counter-data ul {
+
+	    flex-wrap: wrap;
+
+	}
+
+	.counter-data ul li {
+
+	    width: 100%;
+
+	    justify-content: center;
+
+	    margin-top: 10px;
+
+	}
+
+	.event-three .event .event-data:before,
+
+	.event-three .event:hover .event-data:before {
+
+	    border-right: 520px solid transparent;
+
+	}
+
+	.nav-c-slider a:nth-child(1) {
+
+	    left: 5%;
+
+	}
+
+	.nav-c-slider a:nth-child(2) {
+
+	    left: 30%;
+
+	}
+
+	.nav-c-slider a:nth-child(3) {
+
+	    left: 55%;
+
+	}
+
+	.nav-c-slider a:nth-child(4) {
+
+	    left: 80%;
+
+	}
+
+	.nav-c-slider a:nth-child(1),
+
+	.nav-c-slider a:nth-child(2),
+
+	.nav-c-slider a:nth-child(3),
+
+	.nav-c-slider a:nth-child(4){
+
+		top: 35px;
+
+	}
+
+	.nav-c-slider a{
+
+		margin-top: -80px;
+
+	}
+
+	.nav-c-slider {
+
+	    min-height: 400px;
+
+	    width: 100%;
+
+	    border: 0;
+
+	    border-top: 3px solid #e5e5e5;
+
+	    border-radius: 0;
+
+	    margin-top: 40px;
+
+	}
+
+	.nav-c-slider:before{
+
+		display: none;
+
+	}
+
+	.video-box:before {
+
+	    transform: skewX(0deg);
+
+	}
+
+	.causes-of-church .prices {
+
+	    padding: 15px 0;
+
+	}
+
+	.copy-right {
+
+	    flex-wrap: wrap;
+
+	}
+
+	.copy-right .social {
+
+	    flex-basis: 100%;
+
+	    margin-bottom: 20px;
+
+	}
+
+	.copy-right p {
+
+	    text-align: left;
+
+	}
+
+}
+
+@media (max-width: 480px) {
+	.total-donation-amount .total_amount input {
+	    width: 100px;
+	}
+	.donation-page .bg-grey {
+	    padding: 30px 0;
+	}
+	.pd-content .specs-features ul.pd-list li:before {
+	    width: 15px;
+	    height: 15px;
+	    background-size: contain;
+	}
+	.writter-review .review h2 {
+	    font-size: 30px;
+	}
+	.writter-review .review p {
+	    font-size: 18px;
+	    line-height: 28px;
+	}
+	.pd-content ul.pd-list li {
+	    font-size: 18px;
+	    line-height: 28px;
+	    margin-bottom: 10px;
+	}
+	.pd-content h3 {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+	.pd-content ul.pd-list li:before {
+	    left: -25px;
+	}
+	.pd-content ul.pd-list {
+	    padding-left: 25px;
+	}
+	.writter-review {
+	    padding: 30px 20px 20px;
+	}
+	.total-ratings > div span.global-ratings {
+	    margin-top: 15px;
+	}
+	.total-ratings .ratings div.star:before,
+	.total-ratings .ratings div {
+	    width: 25px;
+	    height: 25px;
+	}
+	.pd-content h3 {
+	    margin-bottom: 15px;
+	}
+	.post-review .review-form form {
+	    margin-top: 15px;
+	}
+	.post-review .review-form form input {
+	    height: 50px;
+	    padding: 15px 30px;
+	    font-weight: 400;
+	    margin-bottom: 0;
+	}
+	.clients-reviews .reviewer-image {
+	    width: 50%;
+	}
+	.pd-content ul.pd-tabs li:before,
+	.pd-content ul.pd-tabs li:not(:first-child):before {
+	    content: "";
+	    width: 10px;
+	    height: 2px;
+	    background: #707070;
+	    position: absolute;
+	    left: -20px;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+	.pd-content {
+	    margin-top: 40px;
+	}
+	.pd-content ul.pd-tabs {
+	    margin-bottom: 15px;
+	}
+	.pd-cat-tags ul li ul.pd-cat,
+	.pd-cat-tags ul li ul.pd-tag {
+	    margin-top: 10px;
+	}
+	.pd-cat-tags ul li {
+	    flex-wrap: wrap;
+	}
+	.pd-cart-heart input {
+		width: 100%;
+	    height: 50px;
+	    padding: 10px;
+	    margin-right: 0;
+	}
+	.pd-cart-heart {
+	    flex-wrap: wrap;
+	}
+	.pd-cart-heart .theme-btn {
+	    width: 100%;
+	    padding: 15px;
+	}
+	.pd-edition ul li a {
+	    padding: 10px;
+	}
+	ul.pd-price,
+	.pd-stars,
+	.pd-cart-heart .theme-btn {
+	    margin-top: 20px;
+	}
+	.pd-cart-heart .theme-btn{
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+	.pd-data h2 {
+	    font-size: 30px;
+	    line-height: 40px;
+	}
+	.pd-main-img {
+	    width: 420px;
+	    height: 420px;
+	}
+	ul.pd-imgs li a {
+	    width: 100px;
+	    height: 90px;
+	}
+	.clients-reviews .review-data h5 {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+
+	.pd-content .recommended-data .left-side p {
+	    width: 100%;
+	}
+	.clients-reviews,
+	.writter-review {
+	    margin-top: 40px;
+	}
+	.writter-review {
+		margin-bottom: 30px;
+	}
+	.specs-features > div,
+	.clients-reviews .review {
+	    padding: 30px 15px;
+	}
+	.clients-reviews .review-data {
+	    padding: 0;
+	}
+	.specs-features table tr td {
+	    padding: 10px;
+	}
+	.specs-features table tr:nth-child(even){
+		padding: 0;
+	}
+	.specs-features table tr {
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	.specs-features table tr td {
+	    width: 100%;
+	}
+	.pd-content ul.pd-tabs {
+	    flex-wrap: wrap;
+	    padding-left: 20px;
+	}
+	.pd-content ul.pd-tabs li {
+	    padding: 10px 0px;
+	    width: 100%;
+	}
+	.pd-gallery {
+		flex-wrap: wrap;
+	}
+	.pd-gallery {
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	ul.pd-imgs {
+	    display: flex;
+	    justify-content: space-between;
+	    width: 100%;
+	    margin-right: 0;
+	}
+	.sponsors-slider img {
+	    width: 70%;
+	}
+	.contact-us .content ul li,
+	.contact-us .content span {
+	    width: 100%;
+	}
+	.content .c-detail {
+	    flex-wrap: wrap;
+	}
+	.content .c-detail ul{
+	    margin-top: 20px;
+	}
+	.pray .pray-data h2 {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+	.about-us .services-online .contacts ul {
+	    width: 100%;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+	.contacts, .icon {
+	    flex-wrap: wrap;
+	}
+	.pastor-meta img.pastor-img {
+	    margin-top: -110px;
+	    margin-left: 20px;
+	}
+	.prog-bar .progress {
+	    width: 100%;
+	}
+	.pastor-meta img.pastor-img {
+	    margin-top: -100px;
+	    margin-left: 30px;
+	}
+	.prog-bar .progress {
+	    height: 40px;
+	}
+	.catholic-church .video-sec img {
+	    width: 100%;
+	}
+	.catholic-church .video-sec .video a {
+	    left: 50%;
+	}
+	.our-ministries .heading h2 {
+	    line-height: 40px;
+	    font-size: 30px;
+	}
+	.page-404 .search-error h3 {
+	    font-size: 30px;
+	    margin-bottom: 20px;
+	}
+	.event-detail .content .event-video a {
+	    width: 80px;
+	    height: 80px;
+	}
+	.event-detail .content .event-video a svg {
+	    width: 20px;
+	    height: 20px;
+	}
+	.pagination ul li a {
+	    font-size: 18px;
+	    line-height: 26px;
+	}
+	.pagination {
+	    padding: 20px;
+	}
+	.new-reply form button.theme-btn {
+	    padding: 10px 30px;
+	}
+	.new-reply form input {
+	    height: 60px;
+	}
+	.widget-instagram-photos ul li {
+	    width: 45%;
+	}
+	.tags {
+	    margin: 20px 0;
+	}
+	.comments .comment-data h4 {
+	    display: flex;
+	    flex-wrap: wrap;
+	    align-content: flex-start;
+	    width: 100%;
+	}
+	.comments .comment-data h4 span{
+		margin-left: 0;
+	}
+	blockquote span {
+	    display: none;
+	}
+	.comments .reply.comment {
+	    margin-left: 25px;
+	}
+	.tags ul li a {
+	    padding: 10px 25px;
+	}
+	.comments h3, .new-reply h3 {
+	    font-size: 30px;
+	    line-height: 40px;
+	    color: #333;
+	}
+	ul.check-list li, ul.heart-list li, ul.church-list li {
+	    line-height: 30px;
+	}
+	ul.check-list li:before, ul.heart-list li:before, ul.church-list li:before {
+	    top: 17px;
+	}
+	.blog-detail .blog-meta h2 {
+	    font-size: 30px;
+	    line-height: 40px;
+	    color: #333;
+	}
+	.blog-meta ul {
+	    margin: 15px 0;
+	}
+	blockquote {
+	    font-size: 20px;
+	    line-height: 30px;
+	    padding: 20px;
+	}
+	.event-three .event .event-data {
+	    transform: translateY(110pxpx);
+	    -webkit-transform: translateY(110px);
+	    -moz-transform: translateY(110pxpx);
+	    -o-transform: translateY(110pxpx);
+	}
+	.countdown #countdown {
+	    margin-top: 20px;
+	}
+	.hero-three .data .tittle {
+	    top: 45%;
+	}
+	.contacts ul{
+		width: 100%;
+	}
+	.sidetwo .icon {
+	    margin-right: 20px;
+	    flex-basis: 15%;
+	}
+	.subscribe-two .data h2 {
+	    font-size: 30px;
+	    line-height: 40px;
+	}
+	button.scrollTopStick {
+	    bottom: 30px;
+	    right: 30px;
+	}
+	.copy-right {
+	    justify-content: center;
+	}
+		.subscribe form input {
+	    padding-left: 20px;
+	}
+	.events-carousal .event > img {
+	    height: 400px;
+	}
+	.event .theme-btn{
+		padding: 10px 25px;
+	}
+	.event-data {
+	    transform: translateY(135px);
+	}
+	.hero-two .hero-data h1 {
+
+	    font-size: 60px;
+
+	    line-height: 70px;
+
+	    margin-bottom: 0;
+
+	}
+
+	.hero-data h1, .blesso_banner_content_shape h1 {
+	    font-size: 45px;
+	    line-height: 50px;
+	}
+
+	.hero-data p, .blesso_banner_content_shape p {
+	    font-size: 18px;
+	    line-height: 28px;
+	}
+
+	.support-us .video-box h3 {
+
+	    font-size: 35px;
+
+	}
+
+	.audio-player.style2 #btn-faws-play-pause {
+
+	    width: 60px;
+
+	    height: 60px;
+
+	}
+
+	.audio-player.style2 #btn-faws-play-pause i {
+
+	    font-size: 18px;
+
+	}
+
+	.btn-ctn {
+
+	    margin-bottom: 0;
+
+	}
+
+	.audio-player.style2 .title {
+
+	    margin-bottom: 15px;
+
+	}
+
+	.audio-player.style2  .btn-mute {
+
+	    flex-basis: 20%;
+
+	}
+
+	.hero-three .data .tittle h1 {
+
+	    font-size: 40px;
+	    width: 100%;
+
+	}
+
+	.support-us .video-box > a.icon:before {
+
+	    content: "";
+
+	    width: 80px;
+
+	    height: 80px;
+
+	}
+
+	.support-us .video-box > a.icon {
+
+	    width: 90px;
+
+	    height: 90px;
+
+	}
+
+	.support-us .video-box {
+
+	    padding: 70px 0;
+
+	}
+
+	.livestream .data .title .countdown #countdown #tiles > span{
+
+		width: 60px;
+
+		height: 60px;
+
+	}
+
+	.livestream .data .title .countdown .labels {
+
+	    top: 33px;
+
+	}
+
+	.livestream .countdown .labels li {
+
+	    width: 73px;
+
+	}
+
+	.livestream .data .title h2 {
+
+	    font-size: 35px;
+
+	    line-height: 45px;
+
+	}
+
+	.hero-three .data .tittle {
+
+	    margin-left: 20px;
+
+	}
+
+	.event-three {
+
+	    padding-bottom: 60px;
+
+	}
+
+	.hero-two .hero-data p {
+
+	    font-size: 20px;
+
+	    line-height: 30px;
+
+	}
+
+	.countdown #countdown #tiles > span {
+
+	    font-size: 22px;
+
+	    width: 70px;
+
+	    height: 70px;
+
+	}
+
+	.countdown #countdown {
+
+	    margin-top: 25px;
+
+	}
+
+	.countdown .labels {
+
+	    top: 40px;
+
+	}
+
+	.countdown .labels li {
+
+	    width: 85px;
+
+	    font-size: 12px;
+
+	}
+
+	.about-two .about-info h2 {
+
+	    line-height: 40px;
+
+	}
+
+	.subscribe-two .data form button.theme-btn {
+
+	    padding: 10px 30px;
+
+	}
+
+	.church-prayers .heading h2 {
+
+	    font-size: 30px;
+	    line-height: 40px;
+
+	}
+
+	.hero-data h1 {
+
+	    font-size: 45px;
+
+	    line-height: 55px;
+
+	}
+
+	.sermon-img ul,
+
+	.sermon-grid ul {
+
+	    flex-direction: row;
+
+	    top: 75%;
+
+	    right: 0;
+
+	    left: 0;
+
+	    bottom: 0;
+
+	    border-radius: 0;
+
+	    height: 70px;
+
+	}
+
+	.sermon-img ul li:not(:last-child),
+
+	.sermon-grid ul li:not(:last-child) {
+
+	    border-right: 1px solid #ffffff40;
+
+	}
+
+	.sermon-grid>ul>li a,
+
+	.sermon-img>ul>li a{
+
+		border-top: 0;
+
+	}
+
+	.prayers-slider ul.slick-dots li {
+
+	    width: 15px;
+
+	    height: 15px;
+
+	    margin-right: 10px;
+
+	}
+
+	.prayers-slider ul.slick-dots {
+
+	    bottom: 25px;
+
+	    right: 50%;
+
+	    transform: translateX(50%);
+
+	}
+
+	.slider-data h2, .slider-data h3 {
+
+	    font-size: 20px;
+
+	    line-height: 35px;
+
+	    font-weight: 400;
+
+	}
+
+	.slider-data {
+	    padding: 25px 25px 70px;
+	}
+
+	.subscribe form button{
+
+		width: 120px;
+
+		padding-left: 20px;
+
+	}
+
+	.gap{
+
+		padding: 60px 0;
+
+	}
+
+	.no-top{
+
+		padding-top: 0;
+
+	}
+
+	.no-bottom{
+
+		padding-bottom: 0;
+
+	}
+	.subscribe-two {
+	    padding-top: 30px;
+	}
+	.footer-one h2 {
+
+	    font-size: 25px;
+
+	}
+
+	.footer-one ul.footer-events li figure {
+
+	    margin-bottom: 15px;
+
+	}
+
+	.footer-one ul.footer-events li {
+
+	    margin-bottom: 40px;
+
+	}
+	.footer-one ul.footer-events li > div {
+	    width: 100%;
+	}
+	.footer-one .part-one {
+
+	    padding-bottom: 40px;
+
+	}
+
+	.blog .loadmore {
+
+	    margin-top: 20px;
+
+	}
+
+	.heading h2 {
+
+	    font-size: 30px;
+
+	    line-height: 40px;
+
+	}
+
+	.sermon-data h3 a {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+
+	.about-one .about-data h2 {
+
+	    line-height: 35px;
+
+	}
+
+	h2 {
+
+	    font-size: 30px;
+
+	    line-height: 40px;
+
+	}
+
+	.playlist-info-track, .playlist-duration {
+
+	    font-size: 18px;
+
+	    line-height: 28px;
+
+	}
+
+	.infos-ctn {
+
+	    margin: 10px;
+
+	}
+
+	.audio-run {
+
+	    padding: 50px 10px 10px;
+
+	}
+
+	#btn-faws-play-pause {
+
+	    width: 90px;
+
+	    height: 90px;
+
+	}
+
+	#btn-faws-play-pause i {
+
+	    font-size: 25px;
+
+	}
+
+	.playlist-track-ctn {
+
+	    padding: 10px;
+
+	}
+
+	.playlist-btn-play {
+
+	    width: 70px;
+
+	}
+
+	.dg-counter {
+
+	    margin: 30px 0;
+
+	}
+
+	.dg-counter:before {
+
+	    height: 180px;
+
+	    width: 120px;
+
+	}
+
+	.events-carousal .heading h2 {
+
+	    line-height: 40px;
+
+	    font-size: 30px;
+
+	}
+
+	.events-carousal .heading h2 {
+
+	    width: 100%;
+
+	}
+
+	.donation-form ul li a {
+
+	    padding: 10px;
+
+	    font-size: 18px;
+
+	}
+
+	.header-one .desktop-nav nav {
+
+	    padding: 15px;
+
+	}
+
+	.desktop-nav .logo a img {
+
+	    width: 70%;
+
+	}
+
+	#nav-icon4 {
+
+	    width: 35px;
+
+	}
+
+	.dg-counter h3 {
+
+	    font-size: 65px;
+
+	}
+
+	.causes-of-church .w-35{
+
+		width: 100%;
+
+	}
+
+	.page-404 .search-error h2 {
+
+	    font-size: 130px;
+
+	    line-height: 160px;
+
+	}
+
+	.page-404 .search-error h2 span:before{
+
+		display: none;
+
+	}
+
+	.page-404 {
+
+	    padding-top: 100px;
+
+	    padding-bottom: 100px;
+
+	}
+
+	.banner h2 {
+
+	    font-size: 45px;
+
+	    line-height: 35px;
+
+	}
+	.offer p {
+	    width: 95%;
+	}
+	.about-data p {
+	    width: 100%;
+	}
+	.b_loader-46 p {
+	    font-size: 70px;
+	}
+
+}
+
+@media (max-width: 400px) {
+	.nav-c-slider a img {
+	    width: 70px;
+	    height: 70px;
+	}
+	.sidetwo .icon {
+	    margin-right: 10px;
+	    flex-basis: 17%;
+	}
+
+	.hero-three .data .tittle h1 {
+
+	    font-size: 30px;
+
+	}
+
+	.playlist-track-ctn {
+
+	    margin-top: 10px;
+
+	}
+
+	.playlist-btn-play {
+
+	    width: 50px;
+
+	}
+
+	.playlist-track-ctn{
+
+		flex-wrap: wrap;
+
+	}
+
+	.playlist-info-track, .playlist-duration {
+
+	    padding-top: 5px;
+
+	    padding-bottom: 5px;
+
+	}
+
+	.dg-counter:before {
+
+	    height: 160px;
+
+	    width: 110px;
+
+	}
+
+}
+@media (max-width: 375px) {
+	.about-us .services-online .icon {
+	    flex-basis: 28%;
+	}
+	.cause-detail .cause-meta ul li {
+	    font-size: 30px;
+	    line-height: 40px;
+	}
+	.cause-detail .cause-meta h2 {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+	.pastor-meta img.pastor-img {
+	    margin-top: -80px;
+	    margin-left: 20px;
+	}
+	.prog-bar .progress .progress-bar {
+	    font-size: 17px;
+	}
+	.prog-bar .progress {
+	    height: 30px;
+	}
+	.our-ministries .heading h2 {
+	    line-height: 35px;
+	    font-size: 25px;
+	}
+	.social-medias ul li a {
+	    margin-right: 8px;
+	    padding: 5px 15px;
+	    margin-bottom: 10px;
+	}
+	.social-medias ul li {
+	    font-size: 17px;
+	}
+	.new-reply form input {
+	    padding: 25px;
+	    height: 50px;
+	}
+	.blog-meta ul li.date {
+	    padding: 5px 20px;
+	}
+	.blog-detail .blog-meta h2 {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+	blockquote, .author, .comments {
+	    margin: 20px 0;
+	}
+	blockquote {
+	    font-size: 18px;
+	    line-height: 28px;
+	}
+	ul.check-list li, ul.heart-list li, ul.church-list li {
+	    font-size: 17px;
+	    line-height: 27px;
+	}
+	.author .author-meta h3 span {
+	    font-size: 15px;
+	    margin-left: 0;
+	    width: 100%;
+	    margin-bottom: 5px;
+	}
+	.author .author-meta h3 {
+	    margin-bottom: 5px;
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	.widget-recent-articles a {
+	    font-size: 17px;
+	}
+	.sidetwo .icon {
+	    margin-right: 10px;
+	    flex-basis: 17%;
+	}
+	.footer-one ul.footer-events li {
+	    margin-bottom: 0px;
+	}
+	.hero-two .hero-data h1 {
+	    font-size: 45px;
+	    line-height: 55px;
+	}
+	.hero-two .hero-data p {
+	    font-size: 17px;
+	    line-height: 27px;
+	}
+	.sermon-data {
+	    padding: 30px;
+	}
+	.heading h2 {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+	.hero-one-slider button.slick-prev.slick-arrow {
+	    left: 35%;
+	}
+	.hero-one-slider button.slick-next.slick-arrow {
+	    right: 35%;
+	}
+	.slick-active .hero-data p {
+	    margin: 5px;
+	}
+	.slick-active .hero-data h1, .slick-active .hero-data p {
+	    color: white;
+	    margin: 5px;
+	}
+	p,
+	.heading p {
+	    font-size: 17px;
+	    line-height: 27px;
+	}
+	.subscribe h3 {
+	    font-size: 35px;
+	}
+	.hero-data h1, .blesso_banner_content_shape h1 {
+	    font-size: 37px;
+	    line-height: 47px;
+	}
+	.offer p {
+	    width: 100%;
+	}
+}
