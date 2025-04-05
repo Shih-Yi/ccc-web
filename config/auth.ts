@@ -1,14 +1,23 @@
 import { defineConfig } from '@adonisjs/auth'
 import { sessionGuard, sessionUserProvider } from '@adonisjs/auth/session'
-import type { InferAuthenticators, InferAuthEvents, Authenticators } from '@adonisjs/auth/types'
+import type { InferAuthEvents, Authenticators } from '@adonisjs/auth/types'
 
 const authConfig = defineConfig({
-  default: 'web',
+  default: 'admin',
   guards: {
-    web: sessionGuard({
+    // User guard for public routes
+    // web: sessionGuard({
+    //   useRememberMeTokens: false,
+    //   provider: sessionUserProvider({
+    //     model: () => import('#models/user'),
+    //   }),
+    // }),
+
+    // Admin guard for admin routes
+    admin: sessionGuard({
       useRememberMeTokens: false,
       provider: sessionUserProvider({
-        model: () => import('#models/user')
+        model: () => import('#models/admin_user'),
       }),
     }),
   },
