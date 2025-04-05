@@ -1,0 +1,185 @@
+@layout.admin()
+  @slot('main')
+    <div class="content-wrapper px-4 py-2">
+      <div class="container-fluid px-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h1 class="mt-4">
+            Page Details
+          </h1>
+          <div>
+            <a href="{{ route('admin.pages.edit', [page.id]) }}" class="btn btn-primary me-2">
+              <i class="fas fa-edit me-2"></i>Edit
+            </a>
+            <a href="{{ route('admin.pages.index') }}" class="btn btn-secondary">
+              <i class="fas fa-arrow-left me-2"></i>Back to List
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <h5>
+                  Basic Information
+                </h5>
+                <table class="table">
+                  <tr>
+                    <th style="width: 150px">
+                      Title:
+                    </th>
+                    <td>
+                      @each(locale in ['en', 'zh-TW', 'zh-CN'])
+                        <div>
+                          {{ locale === 'en' ? 'EN' :
+                             locale === 'zh-TW' ? '繁' :
+                             locale === 'zh-CN' ? '简' : '' }}:
+                          {{ page.translations?.find(t => t.locale === locale)?.title || '' }}
+                        </div>
+                      @end
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Type:
+                    </th>
+                    <td>
+                      <span class="badge bg-secondary">{{ page.type }}</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Slug:
+                    </th>
+                    <td>
+                      {{ page.slug }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Status:
+                    </th>
+                    <td>
+                      @if(page.isActive)
+                        <span class="badge bg-success">Active</span>
+                      @else
+                        <span class="badge bg-danger">Inactive</span>
+                      @end
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <h5>
+                  Details
+                </h5>
+                <table class="table">
+                  <tr>
+                    <th style="width: 150px">
+                      Created:
+                    </th>
+                    <td>
+                      {{ page.createdAt.toFormat('yyyy-MM-dd HH:mm') }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Last Updated:
+                    </th>
+                    <td>
+                      {{ page.updatedAt.toFormat('yyyy-MM-dd HH:mm') }}
+                    </td>
+                  </tr>
+                  {{-- @if(page.parentId)
+                    <tr>
+                      <th>
+                        Parent Page:
+                      </th>
+                      <td>
+                        {{ page.parent?.title || 'N/A' }}
+                      </td>
+                    </tr>
+                  @end --}}
+                </table>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <h5>
+                  Content
+                </h5>
+                <div class="border rounded p-3 bg-light">
+                  <div class="form-group">
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active"
+                          id="en-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#content-en"
+                          type="button"
+                          role="tab"
+                          aria-controls="content-en"
+                          aria-selected="true"
+                        >English</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="zh-tw-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#content-zh-tw"
+                          type="button"
+                          role="tab"
+                          aria-controls="content-zh-tw"
+                          aria-selected="false"
+                        >繁體中文</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="zh-cn-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#content-zh-cn"
+                          type="button"
+                          role="tab"
+                          aria-controls="content-zh-cn"
+                          aria-selected="false"
+                        >简体中文</button>
+                      </li>
+                    </ul>
+
+                    <div class="tab-content mt-3">
+                      <div class="tab-pane fade show active" id="content-en" role="tabpanel" aria-labelledby="en-tab">
+                        <div class="border p-3">
+                          {{{ page.translations?.find(t => t.locale === 'en')?.content || '' }}}
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="content-zh-tw" role="tabpanel" aria-labelledby="zh-tw-tab">
+                        <div class="border p-3">
+                          {{{ page.translations?.find(t => t.locale === 'zh-TW')?.content || '' }}}
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="content-zh-cn" role="tabpanel" aria-labelledby="zh-cn-tab">
+                        <div class="border p-3">
+                          {{{ page.translations?.find(t => t.locale === 'zh-CN')?.content || '' }}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-3 mb-3">
+              <a href="{{ route('pages.show', [page.slug]) }}" class="btn btn-outline-primary" target="_blank">
+                <i class="fas fa-external-link-alt me-2"></i>View Page
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  @end
+@end

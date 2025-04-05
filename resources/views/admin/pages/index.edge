@@ -1,0 +1,419 @@
+@layout.admin()
+  @slot('main')
+    <style>
+      :root {
+        /* Level 1 主層級 */
+        --l1-bg: var(--bs-primary);
+        --l1-text: var(--bs-primary);
+        --l1-badge-bg: var(--bs-primary);
+        --l1-badge-text: white;
+        /* Level 2 第二層 */
+        --l2-bg: var(--bs-success);
+        --l2-text: var(--bs-success);
+        --l2-badge-bg: var(--bs-success);
+        --l2-badge-text: white;
+        /* Level 3 第三層 */
+        --l3-bg: var(--bs-info);
+        --l3-text: var(--bs-info);
+        --l3-badge-bg: var(--bs-info);
+        --l3-badge-text: white;
+      }
+
+      .row-l1 {
+        --bs-table-bg: rgb(13, 110, 253, 0.1) !important;
+        --bs-table-striped-bg: rgba(13, 110, 253, 0.05) !important;
+        --bs-table-hover-bg: rgba(13, 110, 253, 0.1) !important;
+      }
+
+      .row-l2 {
+        --bs-table-bg: rgba(25, 135, 84, 0.05) !important;
+        --bs-table-striped-bg: rgba(25, 135, 84, 0.1) !important;
+        --bs-table-hover-bg: rgba(25, 135, 84, 0.15) !important;
+      }
+
+      .row-l3 {
+        --bs-table-bg: rgba(13, 202, 240, 0.05) !important;
+        --bs-table-striped-bg: rgba(13, 202, 240, 0.1) !important;
+        --bs-table-hover-bg: rgba(13, 202, 240, 0.15) !important;
+      }
+
+      /* 套用顏色到相應元素 */
+
+      .l1-icon {
+        color: var(--l1-text);
+      }
+
+      .l1-badge {
+        background-color: var(--l1-badge-bg) !important;
+        color: var(--l1-badge-text) !important;
+      }
+
+      .l2-icon {
+        color: var(--l2-text);
+      }
+
+      .l2-badge {
+        background-color: var(--l2-badge-bg) !important;
+        color: var(--l2-badge-text) !important;
+      }
+
+      .l3-icon {
+        color: var(--l3-text);
+      }
+
+      .l3-badge {
+        background-color: var(--l3-badge-bg) !important;
+        color: var(--l3-badge-text) !important;
+      }
+
+      /* 自定義 Bootstrap table-secondary 顏色 */
+
+      .table-secondary {
+        --bs-table-bg: rgba(13, 110, 253, 0.1) !important;
+        /* 背景色 */
+        --bs-table-striped-bg: rgba(13, 110, 253, 0.1) !important;
+        --bs-table-hover-bg: rgba(13, 110, 253, 0.15) !important;
+        --bs-table-border-color: #dee2e6;
+        color: var(--bs-table-color);
+        border-color: var(--bs-table-border-color);
+      }
+    </style>
+
+    <div class="content-wrapper px-4 py-2">
+      <div class="container-fluid px-4">
+        <h1 class="mt-4">
+          Pages
+        </h1>
+
+        {{-- 頁面操作按鈕 --}}
+        <div class="mb-4">
+          <a href="{{ route('admin.pages.create') }}" class="btn btn-primary me-2">
+            <i class="fas fa-plus me-2"></i>Create New Page
+          </a>
+          <button type="button" class="btn btn-outline-secondary" id="toggleAll">
+            <i class="fas fa-chevron-down me-2"></i>Expand All
+          </button>
+        </div>
+
+        {{-- 頁面列表 --}}
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover" id="pages-table">
+                <thead>
+                  <tr>
+                    <th style="width: 50px">
+                    </th>
+                    <th>
+                      Title
+                    </th>
+                    <th>
+                      Type
+                    </th>
+                    <th>
+                      Slug
+                    </th>
+                    <th>
+                      Order
+                    </th>
+                    <th>
+                      Status
+                    </th>
+                    <th>
+                      Created
+                    </th>
+                    <th>
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="sortable">
+                  @each(page in pages)
+                    {{-- Check if this is a L1 (parent) page --}}
+                    @if(!page.parentId)
+                      <tr data-id="{{ page.id }}" data-type="{{ page.type }}" class="parent-row row-l1">
+                        <td>
+                          <i class="fas fa-grip-vertical handle" style="cursor: move"></i>
+                        </td>
+                        <td>
+                          {{-- 檢查是否有子層級 --}}
+                          @if(pages.some(p => p.parentId === page.id))
+                            <button class="btn btn-link p-0 toggle-children" data-page-id="{{ page.id }}" type="button">
+                              <i class="fas fa-bookmark l1-icon me-2"></i>
+                              <i class="fas fa-chevron-right toggle-icon"></i>
+                            </button>
+                          @else
+                            <i class="fas fa-bookmark l1-icon me-2"></i>
+                          @end
+                          <a href="{{ route('admin.pages.show', [page.id]) }}" class="text-decoration-none">
+                            {{ page.translations?.find(t => t.locale === 'en')?.title || '' }}
+                          </a>
+                        </td>
+                        <td>
+                          <span class="badge l1-badge">L1</span>
+                          <span class="badge bg-secondary">{{ page.type }}</span>
+                        </td>
+                        <td>
+                          {{ page.id }}-{{ page.slug }}
+                        </td>
+                        <td>
+                          {{ page.order }}
+                        </td>
+                        <td>
+                          @if(page.isActive)
+                            <span class="badge bg-success">Active</span>
+                          @else
+                            <span class="badge bg-danger">Inactive</span>
+                          @end
+                        </td>
+                        <td>
+                          {{ page.createdAt.toFormat('yyyy-MM-dd') }}
+                        </td>
+                        <td>
+                          <div class="btn-group">
+                            <a href="{{ route('admin.pages.edit', [page.id]) }}" class="btn btn-sm btn-outline-primary me-2">
+                              <i class="fas fa-edit"></i>
+                            </a>
+                            <form
+                              action="{{ route('admin.pages.destroy', [page.id], { qs: { _method: 'DELETE' }}) }}"
+                              method="POST"
+                              onsubmit="return confirm('Are you sure?')"
+                              class="d-inline"
+                            >
+                              {{ csrfField() }}
+                              <button type="submit" class="btn btn-sm btn-outline-danger" disabled>
+                                <i class="fas fa-trash"></i>
+                              </button>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                    @end
+
+                    {{-- Child rows (L2 and L3) --}}
+                    @if(page.parentId)
+                      <tr
+                        data-id="{{ page.id }}"
+                        data-type="{{ page.type }}"
+                        data-parent-id="{{ page.parentId }}"
+                        class="child-row {{ page.parent?.parentId ? 'row-l3' : 'row-l2' }}"
+                      >
+                        <td>
+                          <i class="fas fa-grip-vertical handle" style="cursor: move"></i>
+                        </td>
+                        <td>
+                          @if(page.parent.parentId)
+                            {{-- 第三層 --}}
+                            <span class="ms-5">
+                              <i class="fas fa-level-down-alt l3-icon"></i>
+                            </span>
+                          @else
+                            {{-- 第二層 --}}
+                            <span class="ms-3">
+                              <i class="fas fa-level-down-alt l2-icon"></i>
+                            </span>
+                          @end
+                          <a href="{{ route('admin.pages.show', [page.id]) }}" class="text-decoration-none">
+                            {{ page.translations?.find(t => t.locale === 'en')?.title || '' }}
+                          </a>
+                        </td>
+                        <td>
+                          @if(page.parent.parentId)
+                            <span class="badge l3-badge">L3</span>
+                          @else
+                            <span class="badge l2-badge">L2</span>
+                          @end
+                          <span class="badge bg-secondary">{{ page.type }}</span>
+                        </td>
+                        <td>
+                          {{ page.id }}-{{ page.slug }}
+                        </td>
+                        <td>
+                          {{ page.order }}
+                        </td>
+                        <td>
+                          @if(page.isActive)
+                            <span class="badge bg-success">Active</span>
+                          @else
+                            <span class="badge bg-danger">Inactive</span>
+                          @end
+                        </td>
+                        <td>
+                          {{ page.createdAt.toFormat('yyyy-MM-dd') }}
+                        </td>
+                        <td>
+                          <div class="btn-group">
+                            <a href="{{ route('admin.pages.edit', [page.id]) }}" class="btn btn-sm btn-outline-primary">
+                              <i class="fas fa-edit"></i>
+                            </a>
+                            <form
+                              action="{{ route('admin.pages.destroy', [page.id], { qs: { _method: 'DELETE' }}) }}"
+                              method="POST"
+                              onsubmit="return confirm('Are you sure?')"
+                              class="d-inline"
+                            >
+                              {{ csrfField() }}
+                              @if(!page.children?.length)
+                                <button type="submit" class="btn btn-sm btn-outline-danger">
+                                  <i class="fas fa-trash"></i>
+                                </button>
+                              @else
+                                <button type="submit" class="btn btn-sm btn-outline-danger" disabled>
+                                  <i class="fas fa-trash"></i>
+                                </button>
+                              @end
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                    @end
+                  @end
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{-- 引入 Sortable.js --}}
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js">
+
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Initialize Sortable for each level
+        function getParentId(el) {
+          return el.getAttribute("data-parent-id");
+        }
+        function initSortable(tbody) {
+          new Sortable(tbody, {
+            handle: ".handle",
+            animation: 150,
+            // 限制拖曳範圍
+            onMove: function(evt) {
+              const draggedParentId = getParentId(evt.dragged);
+              const relatedParentId = getParentId(evt.related);
+              // 如果是第一層（L1，parentId 為 null）
+              if (!draggedParentId && !relatedParentId) {
+                return true;
+              }
+              // 如果是第二層或第三層，確保在同一個父層級內
+              return draggedParentId === relatedParentId;
+            },
+            // 排序完成後更新順序
+            onEnd: async function(evt) {
+              const parentId = getParentId(evt.item);
+              // 獲取同層級的所有行
+              let rows;
+              if (!parentId) {
+                // 第一層
+                rows = [ ...document.querySelectorAll("#pages-table tbody tr:not([data-parent-id])") ];
+              } else {
+                // 第二層或第三層
+                rows = [ ...document.querySelectorAll(`#pages-table tbody tr[data-parent-id="${parentId}"]`) ];
+              }
+              // 準備更新數據
+              const updates = rows.map((row, index) => ({
+                id: row.dataset.id,
+                order: index + 1
+              }));
+              try {
+                const response = await fetch("{{ route('admin.pages.reorder') }}", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('[name="_csrf"]').value
+                  },
+                  body: JSON.stringify({
+                    updates: updates
+                  })
+                });
+                const result = await response.json();
+                if (!result.success) {
+                  // 如果更新失敗，顯示錯誤訊息
+                  toastr.error("Failed to update order");
+                  // 恢復原始排序
+                  evt.item.parentNode.insertBefore(evt.item, evt.oldIndex < evt.newIndex ? evt.oldNextSibling : evt.oldPrevSibling);
+                  return;
+                }
+                // 成功時顯示成功訊息
+                toastr.success("Order updated successfully");
+              } catch (error) {
+                console.error("Error updating order:", error);
+                // 顯示錯誤訊息
+                toastr.error("Failed to update order. Please try again.");
+                // 恢復原始排序
+                evt.item.parentNode.insertBefore(evt.item, evt.oldIndex < evt.newIndex ? evt.oldNextSibling : evt.oldPrevSibling);
+              }
+            }
+          });
+        }
+        // 初始化排序
+        const tbody = document.querySelector(".sortable");
+        initSortable(tbody);
+        // 全局展開/收起功能
+        const toggleAllButton = document.getElementById("toggleAll");
+        let isAllExpanded = false;
+        toggleAllButton.addEventListener("click", () => {
+          isAllExpanded = !isAllExpanded;
+          // 更新按鈕文字和圖標
+          if (isAllExpanded) {
+            toggleAllButton.innerHTML = `<i class="fas fa-chevron-up me-1"></i>Collapse All`;
+          } else {
+            toggleAllButton.innerHTML = `<i class="fas fa-chevron-down me-1"></i>Expand All`;
+          }
+          // 找出所有有子層級的 toggle 按鈕
+          const toggleButtons = document.querySelectorAll(".toggle-children");
+          // 為每個按鈕觸發展開/收起操作
+          toggleButtons.forEach(button => {
+            const hasChildren = document.querySelectorAll(`tr[data-parent-id="${button.dataset.pageId}"]`).length > 0;
+            if (hasChildren) {
+              toggleChildren(button, isAllExpanded);
+            }
+          });
+        });
+        // Initialize toggle functionality
+        const toggleButtons = document.querySelectorAll(".toggle-children");
+        function toggleChildren(button, forceState = null) {
+          const pageId = button.getAttribute("data-page-id");
+          const toggleIcon = button.querySelector(".toggle-icon");
+          // 決定是否要展開（如果 forceState 有值就用它，否則用目前狀態的相反）
+          const shouldExpand = forceState !== null ? forceState : toggleIcon.classList.contains("fa-chevron-right");
+          // 找出直接子層級（L2）和其子層級（L3）
+          const directChildren = document.querySelectorAll(`tr[data-parent-id="${pageId}"]`);
+          const allRelatedRows = new Set();
+          // 收集所有相關行
+          directChildren.forEach(child => {
+            allRelatedRows.add(child);
+            const childId = child.dataset.id;
+            const grandChildren = document.querySelectorAll(`tr[data-parent-id="${childId}"]`);
+            grandChildren.forEach(grandChild => allRelatedRows.add(grandChild));
+          });
+          // 根據展開狀態更新顯示
+          if (shouldExpand) {
+            allRelatedRows.forEach(row => row.style.display = "table-row");
+            toggleIcon.classList.remove("fa-chevron-right");
+            toggleIcon.classList.add("fa-chevron-down");
+          } else {
+            allRelatedRows.forEach(row => row.style.display = "none");
+            toggleIcon.classList.remove("fa-chevron-down");
+            toggleIcon.classList.add("fa-chevron-right");
+          }
+        }
+        // 為每個按鈕添加點擊事件
+        toggleButtons.forEach(button => {
+          button.addEventListener("click", e => {
+            e.preventDefault();
+            toggleChildren(button);
+          });
+        });
+        // 初始化：隱藏所有子行
+        toggleButtons.forEach(button => {
+          toggleChildren(button, false);
+        });
+      });
+    </script>
+  @end
+@end

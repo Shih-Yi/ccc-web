@@ -1,0 +1,20 @@
+@layout.admin()
+  @slot('main')
+    <div class="content-wrapper px-4 py-2">
+      <div class="container-fluid px-4">
+        <h1 class="mt-4">Create Page</h1>
+
+        <div class="card">
+          <div class="card-body">
+            @!component('admin/pages/partials/form', {
+              formAction: route('admin.pages.store'),
+              types: types,
+              page: null,
+              parentPages: parentPages
+            })
+          </div>
+        </div>
+      </div>
+  </div>
+  @end
+@end
