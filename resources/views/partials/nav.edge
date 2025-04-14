@@ -1,0 +1,153 @@
+<header class="header-one">
+
+  <div class="top-bar">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-9">
+
+          <ul class="login">
+
+            <li>
+              <a href="JavaScript:void(0)">
+                <img src="{{ asset('resources/images/bell.svg') }}" alt="Bell" />
+                One in Christ Jesus, engaged in parent's mission, empowered by the Spirit.
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="col-lg-3">
+          <div class="d-flex align-items-center justify-content-end">
+            <ul class="social-medias">
+
+              <li>
+                <a href="JavaScript:void(0)">
+                  <img src="{{ asset('resources/images/facebook.svg') }}" alt="facebook" />
+                </a>
+              </li>
+
+              {{-- <li>
+                <a href="JavaScript:void(0)">
+                  <img src="{{ asset('resources/images/twitter.svg') }} " alt="twitter" />
+                </a>
+              </li> --}}
+
+              <li>
+                <a href="https://www.youtube.com/channel/UCl1ao2pd_LA9kEQ8khj29Dw" target="_blank">                  <i class="fab fa-youtube"></i></a>
+              </li>
+
+              <li>
+                <a href="mailto:admin@chinesechurch.org.nz" target="_blank">                  <i class="far fa-envelope"></i></a>
+              </li>
+
+            </ul>
+
+            <div class="dropdown ms-5">
+              <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-globe"></i>
+                {{ i18n.locale === 'en' ? 'EN' :
+                   i18n.locale === 'zh-TW' ? '繁' :
+                   i18n.locale === 'zh-CN' ? '简' : '' }}
+                <i class="fas fa-chevron-down ms-1"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a
+                    class="dropdown-item {{ i18n.locale === 'en' ? 'active' : '' }}"
+                    href="{{ route('language', { locale: 'en' }) }}"
+                  >
+                    <i class="flag-icon flag-icon-us me-2"></i>English
+          </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item {{ i18n.locale === 'zh-TW' ? 'active' : '' }}"
+                    href="{{ route('language', { locale: 'zh-TW' }) }}"
+                  >
+                    <i class="flag-icon flag-icon-tw me-2"></i>繁體中文
+          </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item {{ i18n.locale === 'zh-CN' ? 'active' : '' }}"
+                    href="{{ route('language', { locale: 'zh-CN' }) }}"
+                  >
+                    <i class="flag-icon flag-icon-cn me-2"></i>简体中文
+          </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="desktop-nav" id="stickyHeader">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <nav>
+
+            <div>
+
+              <a href="/">
+
+                <img class="logo" src="{{ asset('assets/logo.jpeg') }}" alt="Logo" />
+
+              </a>
+
+            </div>
+
+            <div class="nav-bar">
+
+              <ul>
+                @include('partials/navigation')
+              </ul>
+
+            </div>
+
+            <div class="donation">
+              <a
+                href="JavaScript:void(0)"
+                class="theme-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >Contact Us</a>
+            </div>
+
+            <div id="nav-icon4">
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+            </div>
+
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  @include('partials/nav-mobile')
+
+</header>

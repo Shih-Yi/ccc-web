@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> {{ title || "Let's Learn AdonisJS 6" }} </title>
+
+  @if ($slots.meta)
+    {{{ await $slots.meta() }}}
+  @endif
+
+  @vite(['resources/js/app.js'])
+</head>
+<body>
+  <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center">
+                        @if(auth.user)
+                            <span class="navbar-text me-3">
+                                Welcome, {{ auth.user.username || auth.user.email }}
+                            </span>
+                            <form action="{{ route('admin.auth.logout') }}" method="POST" class="mb-0">
+                                {{ csrfField() }}
+                                <button type="submit" class="btn btn-outline-primary">Logout</button>
+                            </form>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+  <div class="max-w-3xl mx-auto mt-6">
+
+    {{{ await $slots.main() }}}
+  </div>
+</body>
