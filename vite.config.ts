@@ -21,6 +21,12 @@ export default defineConfig({
     devSourcemap: true,
   },
   build: {
-    sourcemap: true,
+    manifest: true,
+    outDir: 'public/assets',
+    rollupOptions: {
+      input: {
+        app: 'resources/js/app.js',
+      },
+    },
   },
 })
