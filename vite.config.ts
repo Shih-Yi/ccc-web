@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import adonisjs from '@adonisjs/vite/client'
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [
     adonisjs({
       /**
@@ -27,11 +27,17 @@ export default defineConfig(({ mode }) => ({
       input: {
         app: 'resources/js/app.js',
       },
+      output: {
+        format: 'es',
+      },
     },
   },
   publicDir: 'public',
   assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif'],
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(mode),
+  resolve: {
+    extensions: ['.js', '.json', '.ts', '.tsx'],
   },
-}))
+  optimizeDeps: {
+    include: ['jquery', 'bootstrap', '@popperjs/core'],
+  },
+})
