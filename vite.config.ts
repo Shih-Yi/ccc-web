@@ -28,7 +28,7 @@ export default defineConfig({
         app: 'resources/js/app.js',
       },
       output: {
-        format: 'es',
+        format: 'commonjs',
       },
     },
   },
