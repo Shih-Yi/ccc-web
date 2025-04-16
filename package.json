@@ -6,7 +6,9 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "node bin/server.js",
-    "build": "NODE_ENV=development node ace build && NODE_ENV=production vite build",
+    "build:adonis": "NODE_ENV=development node ace build",
+    "build:vite": "NODE_ENV=production vite build",
+    "build": "npm run build:adonis && npm run build:vite",
     "dev": "node ace serve --hmr",
     "test": "node ace test",
     "lint": "eslint .",

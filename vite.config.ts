@@ -28,7 +28,6 @@ export default defineConfig(({ mode }) => ({
         app: 'resources/js/app.js',
       },
     },
-    assetsInlineLimit: 0, // 確保所有資源都被複製而不是內聯
   },
   publicDir: 'public',
   assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif'],
