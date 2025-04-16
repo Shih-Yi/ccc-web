@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import adonisjs from '@adonisjs/vite/client'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     adonisjs({
       /**
@@ -28,5 +28,11 @@ export default defineConfig({
         app: 'resources/js/app.js',
       },
     },
+    assetsInlineLimit: 0, // 確保所有資源都被複製而不是內聯
   },
-})
+  publicDir: 'public',
+  assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif'],
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(mode),
+  },
+}))
