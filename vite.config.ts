@@ -21,14 +21,16 @@ export default defineConfig({
     devSourcemap: true,
   },
   build: {
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
     manifest: true,
     outDir: 'public/assets',
     rollupOptions: {
-      input: {
-        app: 'resources/js/app.js',
-      },
       output: {
-        format: 'commonjs',
+        entryFileNames: 'js/[name].js',
+        chunkFileNames: 'js/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash][extname]',
       },
     },
   },
