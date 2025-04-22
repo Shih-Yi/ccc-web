@@ -39,6 +39,10 @@ Fancybox.bind('[data-fancybox]', {
   // Optional: Add custom configuration
 })
 
+// import all images
+const allImages = import.meta.glob('../images/*.*', { eager: true })
+window.appImages = { ...allImages }
+
 // Import Custom Scripts
 import './custom'
 
