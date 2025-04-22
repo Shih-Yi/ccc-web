@@ -1,0 +1,75 @@
+{
+  "church": {
+    "title": "We are one Church, in four Congregations.",
+    "description1": "Begun as a purely Chinese Church since 1989, we are now a church that embraces people from many different cultures and backgrounds. Our roots will always be Chinese, but our future is to be a church for all peoples.",
+    "description2": "In 2021 we took the big step to change our English name from Christchurch Chinese Church to Christchurch Community Church. The reason; to make our church more inclusive, and send a message to our community that we are a church for all people, no matter where you are from. This is God's church and God welcomes all who will come to Him. We welcome you!"
+  },
+  "fellowship": {
+    "praise_worship": {
+      "title": "Praise & Worship",
+      "description": "Our church is open and friendly with many social activities. To keep our church running smoothly."
+    },
+    "connect_members": {
+      "title": "Connect Members",
+      "description": "Our church is open and friendly with many social activities. To keep our church running smoothly."
+    },
+    "parents_love": {
+      "title": "Parent's Love",
+      "description": "Our church is open and friendly with many social activities. To keep our church running smoothly."
+    }
+  },
+  "services": {
+    "welcome_text": "You are most welcome to join one of our 4 weekend services",
+    "heading": "weekend services",
+    "encounter": {
+      "title": "Encounter (English)",
+      "day": "Saturday",
+      "time": "4:30pm",
+      "button": "Join Us"
+    },
+    "mandarin_english": {
+      "title": "Mandarin / English",
+      "day": "Sunday",
+      "time": "10:00am",
+      "button": "Join Us"
+    },
+    "cantonese": {
+      "title": "Cantonese",
+      "day": "Sunday",
+      "time": "1:30pm",
+      "button": "Join Us"
+    },
+    "mosaic": {
+      "title": "MOSAIC (English)",
+      "day": "Saturday",
+      "time": "5:00pm",
+      "button": "Join Us"
+    }
+  },
+  "media": {
+    "youtube": {
+      "label": "SUBSCRIBE NOW / GET EXCLUSIVE CONTENT",
+      "title": "Subscribe to our YouTube channel",
+      "description": "Never miss an upload by hitting the notification bell after subscribing to stay updated with our latest videos."
+    },
+    "vacancies": {
+      "label": "CURRENT OPPORTUNITIES / APPLY TODAY",
+      "title": "Ministry Vacancies",
+      "description": "Explore our open ministry positions serving in various capacities. Join our team and grow your faith while serving others."
+    },
+    "newsletter": {
+      "label": "STAY INFORMED / MONTHLY UPDATES",
+      "title": "Subscribe to our Newsletter",
+      "description": "Never miss an upload by hitting the notification bell after subscribing to stay updated with our latest videos."
+    }
+  },
+  "events": {
+    "subtitle": "We enjoy being a multi-denominational church",
+    "title": "Don't Miss Your Chance to Get Closer to God"
+  },
+  "subscribe": {
+    "title": "Let's Keep in Touch!",
+    "description": "Subscribe to keep up with fresh news and exciting updates.",
+    "button": "Subscribe"
+  }
+}

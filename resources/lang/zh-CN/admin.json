@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "welcome": "欢迎",
+    "logout": "登出",
+    "language": {
+      "en": "English",
+      "zh-TW": "繁體中文",
+      "zh-CN": "简体中文"
+    }
+  }
+}
