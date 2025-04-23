@@ -34,7 +34,6 @@ export default defineConfig({
       },
     },
   },
-  publicDir: 'public',
   assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif'],
   resolve: {
     extensions: ['.js', '.json', '.ts', '.tsx'],
