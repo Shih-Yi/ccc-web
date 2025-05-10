@@ -11,14 +11,14 @@ TIMESTAMP=$(date +%Y%m%d%H%M%S)
 BUILD_DIR="/home/deploy/ccc-web/releases/build_$TIMESTAMP"
 echo "開始零停機部署，使用構建目錄: $BUILD_DIR"
 
-# 安裝依賴
-echo "- 安裝依賴"
-npm install
-
 # 備份並修改 tsconfig.json
 echo "- 備份並修改 tsconfig.json"
 cp tsconfig.json tsconfig.json.bak
 sed -i 's#"outDir": "./build"#"outDir": "'$BUILD_DIR'"#g' tsconfig.json
+
+# 安裝依賴
+echo "- 安裝依賴"
+npm install
 
 # 構建應用
 echo "- 構建應用"
