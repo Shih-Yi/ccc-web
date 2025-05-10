@@ -24,6 +24,11 @@ npm install
 echo "- 構建應用"
 NODE_ENV=production NODE_OPTIONS=--max-old-space-size=2048 node ace build
 
+# 在構建目錄中安裝生產依賴 (關鍵步驟)
+echo "- 在構建目錄中安裝生產依賴"
+cd $BUILD_DIR
+npm ci --only=production
+
 # 恢復原始配置
 echo "- 恢復原始配置"
 mv tsconfig.json.bak tsconfig.json
