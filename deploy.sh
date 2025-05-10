@@ -43,7 +43,7 @@ chmod -R 755 $BUILD_DIR
 
 # 創建新的符號連結指向最新構建
 echo "- 更新符號連結"
-ln -sfn $BUILD_DIR /home/deploy/ccc-web/current_build
+ln -sfn $BUILD_DIR /home/deploy/ccc-web/current
 
 # 使用 PM2 重載應用
 echo "- 重載 PM2 應用"
