@@ -25,9 +25,12 @@ echo "- 構建應用"
 NODE_ENV=production NODE_OPTIONS=--max-old-space-size=2048 node ace build
 
 # 在構建目錄中安裝生產依賴 (關鍵步驟)
+pwd
 echo "- 在構建目錄中安裝生產依賴"
 cd $BUILD_DIR
 npm ci --only=production
+cd ..
+pwd
 
 # 恢復原始配置
 echo "- 恢復原始配置"
