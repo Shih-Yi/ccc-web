@@ -6,6 +6,10 @@ echo "== 部署腳本開始執行 =="
 echo "當前目錄: $(pwd)"
 echo "當前用戶: $(whoami)"
 
+# 保存原始目錄路徑，以便後面引用
+ORIGINAL_DIR=$(pwd)
+echo "原始目錄: $ORIGINAL_DIR"
+
 # 創建時間戳目錄
 TIMESTAMP=$(date +%Y%m%d%H%M%S)
 BUILD_DIR="/home/deploy/ccc-web/releases/build_$TIMESTAMP"
@@ -29,12 +33,10 @@ pwd
 echo "- 在構建目錄中安裝生產依賴"
 cd $BUILD_DIR
 npm ci --only=production
-cd ..
-pwd
 
 # 恢復原始配置
 echo "- 恢復原始配置"
-mv tsconfig.json.bak tsconfig.json
+mv -v "$ORIGINAL_DIR/tsconfig.json.bak" "$ORIGINAL_DIR/tsconfig.json"
 
 # 設定環境變數
 echo "- 設定環境變數"
