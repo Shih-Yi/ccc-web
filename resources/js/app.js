@@ -13,7 +13,7 @@ import 'slick-carousel/slick/slick.css'
 
 // Import Custom CSS
 import '../css/app.css'
-
+import '../css/responsive.css'
 // =======================
 // 2. Import JavaScript Dependencies
 // =======================
