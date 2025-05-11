@@ -2224,10 +2224,10 @@ button.scrollTopStick.active {
 }
 .event .theme-btn {
     margin-top: 30px;
-    background-color: #0f0f0f;
+    background-color: var(--main-color);
     width: 100%;
     justify-content: center;
-    border-color: #0f0f0f;
+    border-color: var(--secondary-color);
     overflow: hidden;
     position: relative;
     z-index: 0;
