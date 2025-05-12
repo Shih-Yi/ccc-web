@@ -88,6 +88,10 @@ export default defineConfig({
       pattern: 'resources/lang/**/*.{json,yaml,yml}',
       reloadServer: false,
     },
+    {
+      pattern: 'resources/lang/**/*.json',
+      reloadServer: false,
+    },
   ],
 
   assetsBundler: false,
