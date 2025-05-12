@@ -26,10 +26,47 @@ router
     const { locale } = params
     const supportedLocales = i18nManager.supportedLocales()
 
+    console.log('[Language Route] Switching to locale:', locale)
+    console.log('[Language Route] Current locale before switch:', i18n.locale)
+
     if (supportedLocales.includes(locale)) {
+      // 切换语言
       await i18n.switchLocale(locale)
+      console.log('[Language Route] After switchLocale, locale is:', i18n.locale)
+
+      // 保存到会话
       session.put('locale', locale)
+      console.log('[Language Route] Saved locale to session:', locale)
+
+      // 为确保会话被保存，添加一个提交步骤
+      try {
+        await session.commit()
+        console.log('[Language Route] Session committed successfully')
+      } catch (error) {
+        console.error('[Language Route] Session commit error:', error)
+      }
+
+      // 添加一个备份 Cookie
+      response.cookie('user_locale', locale, {
+        httpOnly: true,
+        path: '/',
+        maxAge: 30 * 24 * 60 * 60 * 1000, // 30 天
+        secure: process.env.NODE_ENV === 'production',
+      })
+      console.log('[Language Route] Set backup cookie')
+
+      // 验证翻译是否工作
+      try {
+        const testTranslation = i18n.t('admin.nav.welcome')
+        console.log('[Language Route] Test translation after switch:', testTranslation)
+      } catch (error) {
+        console.error('[Language Route] Translation error:', error.message)
+      }
+    } else {
+      console.log('[Language Route] Unsupported locale:', locale)
     }
+
+    console.log('[Language Route] Final locale:', i18n.locale)
     return response.redirect().back()
   })
   .as('language')
