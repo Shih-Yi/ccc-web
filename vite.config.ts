@@ -13,7 +13,7 @@ export default defineConfig({
       /**
        * Paths to watch and reload the browser on file change
        */
-      reload: ['resources/views/**/*.edge'],
+      reload: ['resources/views/**/*.edge', 'resources/lang/**/*.json'],
     }),
   ],
   // add css sourcemap
@@ -25,7 +25,7 @@ export default defineConfig({
       transformMixedEsModules: true,
     },
     manifest: true,
-    outDir: 'public/assets',
+    outDir: 'public/',
     rollupOptions: {
       output: {
         entryFileNames: 'js/[name].js',
