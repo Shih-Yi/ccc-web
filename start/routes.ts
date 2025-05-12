@@ -38,7 +38,10 @@ router
 router
   .group(() => {
     router.get('/admin/login', [AdminAuthController, 'show']).as('admin.auth.login')
-    router.post('/admin/login', [AdminAuthController, 'login']).as('admin.auth.login.store')
+    router
+      .post('/admin/login', [AdminAuthController, 'login'])
+      .as('admin.auth.login.store')
+      .middleware([middleware.rateLimit()])
   })
   .middleware([middleware.guest()])
 
