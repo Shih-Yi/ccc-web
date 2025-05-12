@@ -58,7 +58,7 @@ ln -sfn $BUILD_DIR /home/deploy/ccc-web/current
 # 使用 PM2 重載或啟動應用
 echo "- 重載或啟動 PM2 應用"
 cd /home/deploy/ccc-web
-if pm2 list | grep -q "ecosystem"; then
+if pm2 list | grep -q "ccc-web"; then
   echo "應用已在運行，進行重載"
   pm2 reload ecosystem.config.cjs --env production
 else
