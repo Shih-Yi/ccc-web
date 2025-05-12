@@ -1,6 +1,7 @@
 import AdminUser from '#models/admin_user'
 import { HttpContext } from '@adonisjs/core/http'
 import { adminLoginValidator } from '#validators/admin'
+import logger from '@adonisjs/core/services/logger'
 
 export default class AdminAuthController {
   async show({ view, i18n, response }: HttpContext) {
@@ -29,8 +30,24 @@ export default class AdminAuthController {
       // 4. Regenerate session to prevent session fixation
       await session.regenerate()
 
+      // 5. Log successful login
+      this.logAuthEvent({
+        action: 'login',
+        guard: 'admin',
+        user: adminUser,
+        ip: request.ip(),
+      })
+
       return response.redirect().toRoute('admin.dashboard')
     } catch (error) {
+      // Log failed login attempt
+      this.logAuthEvent({
+        action: 'login_failed',
+        guard: 'admin',
+        email: request.input('email', 'unknown'),
+        ip: request.ip(),
+      })
+
       // Use generic error message for better security
       session.flash('errors', { form: i18n.t('messages.auth.login.error') })
 
@@ -41,14 +58,27 @@ export default class AdminAuthController {
     }
   }
 
-  async logout({ response, auth, session }: HttpContext) {
+  async logout({ request, response, auth, session }: HttpContext) {
     // Add security headers
     this.addSecurityHeaders(response)
+
+    // Get user before logout
+    const user = auth.use('admin').user
 
     await auth.use('admin').logout()
 
     // Regenerate session after logout
     await session.regenerate()
+
+    // Log logout if user was logged in
+    if (user) {
+      this.logAuthEvent({
+        action: 'logout',
+        guard: 'admin',
+        user,
+        ip: request.ip(),
+      })
+    }
 
     return response.redirect().toRoute('admin.auth.login')
   }
@@ -65,5 +95,41 @@ export default class AdminAuthController {
       'Content-Security-Policy',
       "default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';"
     )
+  }
+
+  /**
+   * Log authentication events
+   */
+  private logAuthEvent(data: {
+    action: 'login' | 'logout' | 'login_failed'
+    guard: string
+    user?: any
+    email?: string
+    ip: string
+  }) {
+    if (data.action === 'login_failed') {
+      logger.warn(
+        {
+          email: data.email,
+          guard: data.guard,
+          ip: data.ip,
+          action: data.action,
+        },
+        `Failed login attempt for ${data.email} using ${data.guard} guard from IP ${data.ip}`
+      )
+    } else {
+      logger.info(
+        {
+          userId: data.user?.id,
+          email: data.user?.email,
+          guard: data.guard,
+          ip: data.ip,
+          action: data.action,
+        },
+        `User ${data.user?.email} ${data.action === 'login' ? 'logged in' : 'logged out'} ${
+          data.action === 'login' ? 'successfully' : ''
+        } using ${data.guard} guard from IP ${data.ip}`
+      )
+    }
   }
 }
