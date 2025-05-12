@@ -28,13 +28,35 @@ export default defineConfig({
     outDir: 'public/assets',
     rollupOptions: {
       output: {
-        entryFileNames: 'js/[name].js',
+        entryFileNames: 'js/[name]-[hash].js',
         chunkFileNames: 'js/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash][extname]',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name?.split('.') || []
+          const ext = info.length > 0 ? info[info.length - 1] : ''
+
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `img/[name]-[hash][extname]`
+          }
+
+          if (/woff|woff2|eot|ttf|otf/i.test(ext)) {
+            return `fonts/[name]-[hash][extname]`
+          }
+
+          return `[name]-[hash][extname]`
+        },
       },
     },
   },
-  assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif'],
+  assetsInclude: [
+    '**/*.svg',
+    '**/*.png',
+    '**/*.jpg',
+    '**/*.jpeg',
+    '**/*.gif',
+    '**/*.woff',
+    '**/*.woff2',
+    '**/*.ttf',
+  ],
   resolve: {
     extensions: ['.js', '.json', '.ts', '.tsx'],
   },
