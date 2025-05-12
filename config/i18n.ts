@@ -1,5 +1,16 @@
 import app from '@adonisjs/core/services/app'
 import { defineConfig, formatters, loaders } from '@adonisjs/i18n'
+import { join } from 'node:path'
+
+/**
+ * 根據環境決定語言文件路徑
+ */
+function getLangFilesPath() {
+  if (app.inProduction) {
+    return join(process.cwd(), 'resources/lang')
+  }
+  return app.languageFilesPath()
+}
 
 export default defineConfig({
   defaultLocale: 'en',
@@ -8,7 +19,7 @@ export default defineConfig({
 
   loaders: [
     loaders.fs({
-      location: app.languageFilesPath(),
+      location: getLangFilesPath(),
     }),
   ],
 })
