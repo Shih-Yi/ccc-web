@@ -25,7 +25,7 @@ export default defineConfig({
       transformMixedEsModules: true,
     },
     manifest: true,
-    outDir: 'public/',
+    outDir: 'public/assets',
     rollupOptions: {
       output: {
         entryFileNames: 'js/[name].js',
