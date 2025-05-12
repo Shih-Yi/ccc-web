@@ -33,7 +33,7 @@ export default class RateLimiterMiddleware {
   ) {
     // Default options
     const maxRequests = options.requests || 5
-    const duration = options.duration || 60000 // 1 minute in milliseconds
+    const duration = options.duration || 600000 // 10 minutes in milliseconds
     const prefix = options.prefix || 'login'
 
     // Use IP address as the key
