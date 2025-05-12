@@ -6,10 +6,12 @@ import { join } from 'node:path'
  * 根據環境決定語言文件路徑
  */
 function getLangFilesPath() {
-  if (app.inProduction) {
-    return join(process.cwd(), 'resources/lang')
-  }
-  return app.languageFilesPath()
+  const path = app.inProduction ? join(process.cwd(), 'resources/lang') : app.languageFilesPath()
+
+  console.log(`${app.inProduction} -[i18n] Using language path: ${path}`)
+  console.log(`[i18n] App in production: ${app.inProduction}`)
+
+  return path
 }
 
 export default defineConfig({
