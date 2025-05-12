@@ -55,16 +55,10 @@ chmod -R 755 $BUILD_DIR
 echo "- 更新符號連結"
 ln -sfn $BUILD_DIR /home/deploy/ccc-web/current
 
-# 使用 PM2 重載或啟動應用
-echo "- 重載或啟動 PM2 應用"
+# 使用 PM2 重載應用
+echo "- 重載 PM2 應用"
 cd /home/deploy/ccc-web
-if pm2 list | grep -q "ccc-web"; then
-  echo "應用已在運行，進行重載"
-  pm2 reload ecosystem.config.cjs --env production
-else
-  echo "應用未運行，進行啟動"
-  pm2 start ecosystem.config.cjs --env production
-fi
+pm2 reload ecosystem.config.cjs --env production
 
 # 清理舊的構建目錄，保留最近5個
 # echo "- 清理舊版本"
