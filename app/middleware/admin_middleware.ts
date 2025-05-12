@@ -21,7 +21,7 @@ export default class AdminMiddleware {
       })
     } catch (error) {
       // Handle unauthenticated case
-      return response.redirect().toRoute('auth.login', {
+      return response.redirect().toRoute('admin.auth.login', {
         intended: request.url(),
       })
     }
