@@ -1,12 +1,13 @@
 import app from '@adonisjs/core/services/app'
 import { defineConfig, formatters, loaders } from '@adonisjs/i18n'
+import { join } from 'node:path'
 
 /**
  * 根據環境決定語言文件路徑
  */
 function getLangFilesPath() {
   const path = app.inProduction
-    ? '/home/deploy/ccc-web/current/resources/lang'
+    ? join(process.cwd(), 'current/resources/lang')
     : app.languageFilesPath()
 
   console.log(`[i18n] Using language path: ${path}`)
