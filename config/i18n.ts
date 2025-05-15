@@ -7,10 +7,6 @@ import { join } from 'node:path'
  */
 function getLangFilesPath() {
   const path = app.inProduction ? join(process.cwd(), 'resources/lang') : app.languageFilesPath()
-
-  console.log(`[i18n] Using language path: ${path}`)
-  console.log(`[i18n] App in production: ${app.inProduction}`)
-
   return path
 }
 

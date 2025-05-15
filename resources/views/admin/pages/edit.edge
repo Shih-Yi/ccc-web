@@ -7,7 +7,7 @@
       <div class="card">
         <div class="card-body">
           @!component('admin/pages/partials/form', {
-            formAction: route('admin.pages.update', { id: page.id }, { qs: { _method: 'PUT'}}),
+            formAction: route('admin.pages.update', { id: page.id }, { qs: { _method: 'PUT' }}),
             types: types,
             page: page,
             parentPages: parentPages
