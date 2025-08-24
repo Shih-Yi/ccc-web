@@ -55,6 +55,10 @@ chmod -R 755 $BUILD_DIR
 echo "- 更新符號連結"
 ln -sfn $BUILD_DIR /home/deploy/ccc-web/current
 
+# 確保專案根目錄有 logs 目錄
+echo "- 確保專案根目錄有 logs 目錄"
+mkdir -p /home/deploy/ccc-web/logs
+
 # 使用 PM2 重載應用
 echo "- 重載 PM2 應用"
 cd /home/deploy/ccc-web
