@@ -59,14 +59,21 @@ ln -sfn $BUILD_DIR /home/deploy/ccc-web/current
 echo "- 確保專案根目錄有 logs 目錄"
 mkdir -p /home/deploy/ccc-web/logs
 
-# 使用 PM2 重載應用
+# 檢查 PM2 應用是否存在並決定策略
 echo "- 重載 PM2 應用"
 cd /home/deploy/ccc-web
-pm2 reload ecosystem.config.cjs --env production
+
+if pm2 describe ccc-web > /dev/null 2>&1; then
+    echo "  應用已存在，使用零停機重載"
+    pm2 reload ecosystem.config.cjs --env production
+else
+    echo "  應用不存在，首次啟動"
+    pm2 start ecosystem.config.cjs --env production
+fi
 
 # 清理舊的構建目錄，保留最近5個
-# echo "- 清理舊版本"
-# cd /home/deploy/ccc-web/releases
-# ls -td build_* 2>/dev/null | tail -n +6 | xargs -r rm -rf
+echo "- 清理舊版本"
+cd /home/deploy/ccc-web/releases
+ls -td build_* 2>/dev/null | tail -n +6 | xargs -r rm -rf
 
 echo "== 零停機部署完成！=="
